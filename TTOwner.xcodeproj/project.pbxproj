@@ -14,11 +14,11 @@
 		09C664721B5F657B003BE91F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09C664711B5F657B003BE91F /* Images.xcassets */; };
 		09C664751B5F657B003BE91F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C664731B5F657B003BE91F /* LaunchScreen.xib */; };
 		09C664811B5F657B003BE91F /* TTOwnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C664801B5F657B003BE91F /* TTOwnerTests.m */; };
-		09C781C01B5F7E710050B73F /* TTLoginViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C781BE1B5F7E710050B73F /* TTLoginViewViewController.m */; };
-		09C781C11B5F7E710050B73F /* TTLoginViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C781BF1B5F7E710050B73F /* TTLoginViewViewController.xib */; };
 		09C781CB1B5F83460050B73F /* TTViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C781CA1B5F83460050B73F /* TTViewModel.m */; };
 		09C781CE1B5F839D0050B73F /* TTLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C781CD1B5F839D0050B73F /* TTLoginViewModel.m */; };
 		09C781D41B5F86950050B73F /* NSString+LangExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C781D31B5F86950050B73F /* NSString+LangExt.m */; };
+		0B3AA43B1B5FBF950000C109 /* TTLoginViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AA4391B5FBF950000C109 /* TTLoginViewViewController.m */; };
+		0B3AA43C1B5FBF950000C109 /* TTLoginViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3AA43A1B5FBF950000C109 /* TTLoginViewViewController.xib */; };
 		5A5CAD3EDC8965EACB51285A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 724BD81A907B0CD794E779A2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -46,9 +46,6 @@
 		09C6647A1B5F657B003BE91F /* TTOwnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTOwnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C6647F1B5F657B003BE91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09C664801B5F657B003BE91F /* TTOwnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTOwnerTests.m; sourceTree = "<group>"; };
-		09C781BD1B5F7E710050B73F /* TTLoginViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTLoginViewViewController.h; path = ../../TTLoginViewViewController.h; sourceTree = "<group>"; };
-		09C781BE1B5F7E710050B73F /* TTLoginViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTLoginViewViewController.m; path = ../../TTLoginViewViewController.m; sourceTree = "<group>"; };
-		09C781BF1B5F7E710050B73F /* TTLoginViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TTLoginViewViewController.xib; path = ../../TTLoginViewViewController.xib; sourceTree = "<group>"; };
 		09C781C31B5F814E0050B73F /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		09C781C91B5F83460050B73F /* TTViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTViewModel.h; sourceTree = "<group>"; };
 		09C781CA1B5F83460050B73F /* TTViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTViewModel.m; sourceTree = "<group>"; };
@@ -56,6 +53,9 @@
 		09C781CD1B5F839D0050B73F /* TTLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLoginViewModel.m; sourceTree = "<group>"; };
 		09C781D21B5F86950050B73F /* NSString+LangExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LangExt.h"; sourceTree = "<group>"; };
 		09C781D31B5F86950050B73F /* NSString+LangExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LangExt.m"; sourceTree = "<group>"; };
+		0B3AA4381B5FBF950000C109 /* TTLoginViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLoginViewViewController.h; sourceTree = "<group>"; };
+		0B3AA4391B5FBF950000C109 /* TTLoginViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLoginViewViewController.m; sourceTree = "<group>"; };
+		0B3AA43A1B5FBF950000C109 /* TTLoginViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTLoginViewViewController.xib; sourceTree = "<group>"; };
 		30B5665F21D8EFB5F6880C6D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5A44EB03FD981B2A5AF5BF50 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		724BD81A907B0CD794E779A2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,9 +103,9 @@
 		09C664631B5F657B003BE91F /* TTOwner */ = {
 			isa = PBXGroup;
 			children = (
+				0B3AA4361B5FBF950000C109 /* ViewController */,
 				09C781D11B5F86810050B73F /* Category */,
 				09C781C41B5F82B70050B73F /* View */,
-				09C781C51B5F82B70050B73F /* ViewController */,
 				09C781C71B5F82B70050B73F /* ViewModel */,
 				09C664681B5F657B003BE91F /* AppDelegate.h */,
 				09C664691B5F657B003BE91F /* AppDelegate.m */,
@@ -153,24 +153,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		09C781C51B5F82B70050B73F /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				09C781C61B5F82B70050B73F /* LoginVC */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		09C781C61B5F82B70050B73F /* LoginVC */ = {
-			isa = PBXGroup;
-			children = (
-				09C781BD1B5F7E710050B73F /* TTLoginViewViewController.h */,
-				09C781BE1B5F7E710050B73F /* TTLoginViewViewController.m */,
-				09C781BF1B5F7E710050B73F /* TTLoginViewViewController.xib */,
-			);
-			path = LoginVC;
-			sourceTree = "<group>";
-		};
 		09C781C71B5F82B70050B73F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +179,24 @@
 				09C781D31B5F86950050B73F /* NSString+LangExt.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		0B3AA4361B5FBF950000C109 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0B3AA4371B5FBF950000C109 /* LoginVC */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0B3AA4371B5FBF950000C109 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				0B3AA4381B5FBF950000C109 /* TTLoginViewViewController.h */,
+				0B3AA4391B5FBF950000C109 /* TTLoginViewViewController.m */,
+				0B3AA43A1B5FBF950000C109 /* TTLoginViewViewController.xib */,
+			);
+			path = LoginVC;
 			sourceTree = "<group>";
 		};
 		60A0355647CEAFC2143AA3FB /* Frameworks */ = {
@@ -300,7 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09C664701B5F657B003BE91F /* Main.storyboard in Resources */,
-				09C781C11B5F7E710050B73F /* TTLoginViewViewController.xib in Resources */,
+				0B3AA43C1B5FBF950000C109 /* TTLoginViewViewController.xib in Resources */,
 				09C664751B5F657B003BE91F /* LaunchScreen.xib in Resources */,
 				09C664721B5F657B003BE91F /* Images.xcassets in Resources */,
 			);
@@ -354,12 +354,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				09C6646D1B5F657B003BE91F /* ViewController.m in Sources */,
-				09C781C01B5F7E710050B73F /* TTLoginViewViewController.m in Sources */,
 				09C781CE1B5F839D0050B73F /* TTLoginViewModel.m in Sources */,
 				09C781D41B5F86950050B73F /* NSString+LangExt.m in Sources */,
 				09C781CB1B5F83460050B73F /* TTViewModel.m in Sources */,
 				09C6646A1B5F657B003BE91F /* AppDelegate.m in Sources */,
 				09C664671B5F657B003BE91F /* main.m in Sources */,
+				0B3AA43B1B5FBF950000C109 /* TTLoginViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
