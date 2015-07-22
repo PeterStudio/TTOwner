@@ -16,6 +16,9 @@
 		09C664811B5F657B003BE91F /* TTOwnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C664801B5F657B003BE91F /* TTOwnerTests.m */; };
 		09C781C01B5F7E710050B73F /* TTLoginViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C781BE1B5F7E710050B73F /* TTLoginViewViewController.m */; };
 		09C781C11B5F7E710050B73F /* TTLoginViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C781BF1B5F7E710050B73F /* TTLoginViewViewController.xib */; };
+		09C781CB1B5F83460050B73F /* TTViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C781CA1B5F83460050B73F /* TTViewModel.m */; };
+		09C781CE1B5F839D0050B73F /* TTLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C781CD1B5F839D0050B73F /* TTLoginViewModel.m */; };
+		09C781D41B5F86950050B73F /* NSString+LangExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C781D31B5F86950050B73F /* NSString+LangExt.m */; };
 		5A5CAD3EDC8965EACB51285A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 724BD81A907B0CD794E779A2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -43,9 +46,16 @@
 		09C6647A1B5F657B003BE91F /* TTOwnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTOwnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C6647F1B5F657B003BE91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09C664801B5F657B003BE91F /* TTOwnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTOwnerTests.m; sourceTree = "<group>"; };
-		09C781BD1B5F7E710050B73F /* TTLoginViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLoginViewViewController.h; sourceTree = "<group>"; };
-		09C781BE1B5F7E710050B73F /* TTLoginViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLoginViewViewController.m; sourceTree = "<group>"; };
-		09C781BF1B5F7E710050B73F /* TTLoginViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTLoginViewViewController.xib; sourceTree = "<group>"; };
+		09C781BD1B5F7E710050B73F /* TTLoginViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTLoginViewViewController.h; path = ../../TTLoginViewViewController.h; sourceTree = "<group>"; };
+		09C781BE1B5F7E710050B73F /* TTLoginViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTLoginViewViewController.m; path = ../../TTLoginViewViewController.m; sourceTree = "<group>"; };
+		09C781BF1B5F7E710050B73F /* TTLoginViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TTLoginViewViewController.xib; path = ../../TTLoginViewViewController.xib; sourceTree = "<group>"; };
+		09C781C31B5F814E0050B73F /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		09C781C91B5F83460050B73F /* TTViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTViewModel.h; sourceTree = "<group>"; };
+		09C781CA1B5F83460050B73F /* TTViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTViewModel.m; sourceTree = "<group>"; };
+		09C781CC1B5F839D0050B73F /* TTLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLoginViewModel.h; sourceTree = "<group>"; };
+		09C781CD1B5F839D0050B73F /* TTLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLoginViewModel.m; sourceTree = "<group>"; };
+		09C781D21B5F86950050B73F /* NSString+LangExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LangExt.h"; sourceTree = "<group>"; };
+		09C781D31B5F86950050B73F /* NSString+LangExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LangExt.m"; sourceTree = "<group>"; };
 		30B5665F21D8EFB5F6880C6D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5A44EB03FD981B2A5AF5BF50 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		724BD81A907B0CD794E779A2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +103,10 @@
 		09C664631B5F657B003BE91F /* TTOwner */ = {
 			isa = PBXGroup;
 			children = (
-				09C781C21B5F7E780050B73F /* LoginVC */,
+				09C781D11B5F86810050B73F /* Category */,
+				09C781C41B5F82B70050B73F /* View */,
+				09C781C51B5F82B70050B73F /* ViewController */,
+				09C781C71B5F82B70050B73F /* ViewModel */,
 				09C664681B5F657B003BE91F /* AppDelegate.h */,
 				09C664691B5F657B003BE91F /* AppDelegate.m */,
 				09C6646B1B5F657B003BE91F /* ViewController.h */,
@@ -111,6 +124,7 @@
 			children = (
 				09C664651B5F657B003BE91F /* Info.plist */,
 				09C664661B5F657B003BE91F /* main.m */,
+				09C781C31B5F814E0050B73F /* Macros.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -132,14 +146,57 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		09C781C21B5F7E780050B73F /* LoginVC */ = {
+		09C781C41B5F82B70050B73F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		09C781C51B5F82B70050B73F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				09C781C61B5F82B70050B73F /* LoginVC */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		09C781C61B5F82B70050B73F /* LoginVC */ = {
 			isa = PBXGroup;
 			children = (
 				09C781BD1B5F7E710050B73F /* TTLoginViewViewController.h */,
 				09C781BE1B5F7E710050B73F /* TTLoginViewViewController.m */,
 				09C781BF1B5F7E710050B73F /* TTLoginViewViewController.xib */,
 			);
-			name = LoginVC;
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		09C781C71B5F82B70050B73F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				09C781C81B5F82B70050B73F /* LoginVM */,
+				09C781C91B5F83460050B73F /* TTViewModel.h */,
+				09C781CA1B5F83460050B73F /* TTViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		09C781C81B5F82B70050B73F /* LoginVM */ = {
+			isa = PBXGroup;
+			children = (
+				09C781CC1B5F839D0050B73F /* TTLoginViewModel.h */,
+				09C781CD1B5F839D0050B73F /* TTLoginViewModel.m */,
+			);
+			path = LoginVM;
+			sourceTree = "<group>";
+		};
+		09C781D11B5F86810050B73F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				09C781D21B5F86950050B73F /* NSString+LangExt.h */,
+				09C781D31B5F86950050B73F /* NSString+LangExt.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		60A0355647CEAFC2143AA3FB /* Frameworks */ = {
@@ -298,6 +355,9 @@
 			files = (
 				09C6646D1B5F657B003BE91F /* ViewController.m in Sources */,
 				09C781C01B5F7E710050B73F /* TTLoginViewViewController.m in Sources */,
+				09C781CE1B5F839D0050B73F /* TTLoginViewModel.m in Sources */,
+				09C781D41B5F86950050B73F /* NSString+LangExt.m in Sources */,
+				09C781CB1B5F83460050B73F /* TTViewModel.m in Sources */,
 				09C6646A1B5F657B003BE91F /* AppDelegate.m in Sources */,
 				09C664671B5F657B003BE91F /* main.m in Sources */,
 			);
@@ -377,7 +437,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -414,7 +474,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
