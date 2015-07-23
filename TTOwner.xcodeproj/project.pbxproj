@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		099CCDC61B607A1700B167F0 /* TTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099CCDC51B607A1700B167F0 /* TTBaseViewController.m */; };
+		099CCDC91B607A3300B167F0 /* TTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099CCDC81B607A3300B167F0 /* TTHomeViewController.m */; };
 		09C664671B5F657B003BE91F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C664661B5F657B003BE91F /* main.m */; };
 		09C6646A1B5F657B003BE91F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C664691B5F657B003BE91F /* AppDelegate.m */; };
 		09C6646D1B5F657B003BE91F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C6646C1B5F657B003BE91F /* ViewController.m */; };
@@ -33,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		099CCDC41B607A1700B167F0 /* TTBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBaseViewController.h; sourceTree = "<group>"; };
+		099CCDC51B607A1700B167F0 /* TTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseViewController.m; sourceTree = "<group>"; };
+		099CCDC71B607A3300B167F0 /* TTHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTHomeViewController.h; sourceTree = "<group>"; };
+		099CCDC81B607A3300B167F0 /* TTHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTHomeViewController.m; sourceTree = "<group>"; };
 		09C664611B5F657B003BE91F /* TTOwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTOwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C664651B5F657B003BE91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09C664661B5F657B003BE91F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -80,6 +86,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		099CCDC31B6079D800B167F0 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				099CCDC41B607A1700B167F0 /* TTBaseViewController.h */,
+				099CCDC51B607A1700B167F0 /* TTBaseViewController.m */,
+				099CCDC71B607A3300B167F0 /* TTHomeViewController.h */,
+				099CCDC81B607A3300B167F0 /* TTHomeViewController.m */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
 		09C664581B5F657B003BE91F = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +201,7 @@
 		0B3AA4361B5FBF950000C109 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				099CCDC31B6079D800B167F0 /* MainVC */,
 				0B3AA4371B5FBF950000C109 /* LoginVC */,
 			);
 			path = ViewController;
@@ -356,6 +374,8 @@
 				09C6646D1B5F657B003BE91F /* ViewController.m in Sources */,
 				09C781CE1B5F839D0050B73F /* TTLoginViewModel.m in Sources */,
 				09C781D41B5F86950050B73F /* NSString+LangExt.m in Sources */,
+				099CCDC61B607A1700B167F0 /* TTBaseViewController.m in Sources */,
+				099CCDC91B607A3300B167F0 /* TTHomeViewController.m in Sources */,
 				09C781CB1B5F83460050B73F /* TTViewModel.m in Sources */,
 				09C6646A1B5F657B003BE91F /* AppDelegate.m in Sources */,
 				09C664671B5F657B003BE91F /* main.m in Sources */,
