@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTF;
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property (strong, nonatomic) TTLoginViewModel * viewModel;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *stausLab;
 @end
 
 @implementation TTLoginViewViewController
@@ -33,22 +36,16 @@
     RAC(self.viewModel,phoneNumber) = self.phoneTF.rac_textSignal;
     RAC(self.viewModel,password) = self.passwordTF.rac_textSignal;
     self.loginBtn.rac_command = self.viewModel.loginCommand;
+    RAC(self.stausLab, text) = RACObserve(self.viewModel, statusMessage);
     
-    @weakify(self)
-    [[self.phoneTF.rac_textSignal
-      filter:^BOOL(id value){
-          NSString*text = value;
-          return text.length > 11;
-      }]
-     subscribeNext:^(NSString * text){
-         @strongify(self);
-         NSString * temp = [text substringWithRange:NSMakeRange(0, 11)];
-         self.phoneTF.text = temp;
-     }];
-    
-    [[self.loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(RACCommand * command) {
-        NSLog(@"touch me");
-    }];
+//    [[[self.loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] mapReplace:self.viewModel.loginCommand] subscribeNext:^(RACCommand * command) {
+//        [[command execute:nil] subscribeNext:^(id x) {
+//            NSLog(@"success");
+//        } error:^(NSError *error) {
+//            NSLog(@"error %@",error);
+//        }];
+//
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {

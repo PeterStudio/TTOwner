@@ -12,4 +12,5 @@
 @property(nonatomic, strong) RACCommand *loginCommand;
 @property(nonatomic, strong) NSString *phoneNumber;
 @property(nonatomic, strong) NSString *password;
+@property(nonatomic, strong) NSString *statusMessage;
 @end

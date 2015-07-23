@@ -10,6 +10,7 @@
                 <outlet property="loginBtn" destination="Jb1-5x-1iE" id="8k8-cf-h4t"/>
                 <outlet property="passwordTF" destination="5Bw-Df-0Rf" id="gjH-Yh-Ucp"/>
                 <outlet property="phoneTF" destination="Qzg-lk-6tS" id="1Sk-7c-gj5"/>
+                <outlet property="stausLab" destination="DuG-Pg-NuT" id="bXd-Lx-mor"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,6 +35,12 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuG-Pg-NuT">
+                    <rect key="frame" x="0.0" y="303" width="320" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>

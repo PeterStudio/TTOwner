@@ -8,6 +8,10 @@
 
 #import "TTLoginViewModel.h"
 #import "NSString+LangExt.h"
+#import "AFHTTPRequestOperationManager+RACSupport.h"
+
+static NSString *const kSubscribeURL = @"http://reactivetest.apiary.io/subscribers";
+
 
 @interface TTLoginViewModel ()
 @property(nonatomic, strong) RACSignal *phoneValidSignal;
@@ -18,7 +22,22 @@
 
 - (instancetype)init{
     if (self = [super init]) {
+        RACSignal *startedMessageSource = [self.loginCommand.executionSignals map:^id(RACSignal *subscribeSignal) {
+            return NSLocalizedString(@"Sending request...", nil);
+        }];
         
+        RACSignal *completedMessageSource = [self.loginCommand.executionSignals flattenMap:^RACStream *(RACSignal *subscribeSignal) {
+            return [[[subscribeSignal materialize] filter:^BOOL(RACEvent *event) {
+                return event.eventType == RACEventTypeCompleted;
+            }] map:^id(id value) {
+                return NSLocalizedString(@"Thanks", nil);
+            }];
+        }];
+        
+        RACSignal *failedMessageSource = [[self.loginCommand.errors subscribeOn:[RACScheduler mainThreadScheduler]] map:^id(NSError *error) {
+            return NSLocalizedString(@"Error :(", nil);
+        }];
+        RAC(self, statusMessage) = [RACSignal merge:@[startedMessageSource, completedMessageSource, failedMessageSource]];
     }
     return self;
 }
@@ -29,11 +48,18 @@
         _loginCommand = [[RACCommand alloc] initWithEnabled:[RACSignal combineLatest:@[self.phoneValidSignal,self.passwordValidSignal] reduce:^(NSNumber * phoneValid, NSNumber * passwordValid){
             return @([phoneValid boolValue]&&[passwordValid boolValue]);
         }] signalBlock:^RACSignal *(id input) {
-//            @strongify(self);
-            return [RACSignal empty];//[SubscribeViewModel postEmail:self.email];
+            @strongify(self);
+            return [TTLoginViewModel postEmail:@"xiaopohai@gmail.com"];
         }];
     }
     return _loginCommand;
+}
+
++ (RACSignal *)postEmail:(NSString *)email {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer new];
+    NSDictionary *body = @{@"email": email ?: @""};
+    return [[[manager rac_POST:kSubscribeURL parameters:body] logError] replayLazily];
 }
 
 - (RACSignal *)phoneValidSignal{
