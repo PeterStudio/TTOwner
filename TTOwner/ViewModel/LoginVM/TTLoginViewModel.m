@@ -10,7 +10,7 @@
 #import "NSString+LangExt.h"
 #import "AFHTTPRequestOperationManager+RACSupport.h"
 
-static NSString *const kSubscribeURL = @"http://reactivetest.apiary.io/subscribers";
+static NSString *const kSubscribeURL = @"http://private-anon-7f299ab56-reactivetest.apiary-mock.com/subscribers";// @"http://reactivetest.apiary.io/subscribers";
 
 
 @interface TTLoginViewModel ()
@@ -38,6 +38,7 @@ static NSString *const kSubscribeURL = @"http://reactivetest.apiary.io/subscribe
             return NSLocalizedString(@"Error :(", nil);
         }];
         RAC(self, statusMessage) = [RACSignal merge:@[startedMessageSource, completedMessageSource, failedMessageSource]];
+        
     }
     return self;
 }
@@ -49,7 +50,12 @@ static NSString *const kSubscribeURL = @"http://reactivetest.apiary.io/subscribe
             return @([phoneValid boolValue]&&[passwordValid boolValue]);
         }] signalBlock:^RACSignal *(id input) {
             @strongify(self);
-            return [TTLoginViewModel postEmail:@"xiaopohai@gmail.com"];
+            return [[[TTLoginViewModel postEmail:@"duwen16@gmail.com"] doNext:^(id x) {
+                NSLog(@"x %@",x);
+            }] catch:^RACSignal *(NSError *error) {
+                // 捕获登录错误
+                return [RACSignal error:error];
+            }];
         }];
     }
     return _loginCommand;
