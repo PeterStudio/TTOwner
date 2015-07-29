@@ -286,6 +286,11 @@
 				TargetAttributes = {
 					09C664601B5F657B003BE91F = {
 						CreatedOnToolsVersion = 6.3.2;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					09C664791B5F657B003BE91F = {
 						CreatedOnToolsVersion = 6.3.2;
