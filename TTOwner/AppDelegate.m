@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "Macros.h"
 
-#import "TTLoginViewViewController.h"
+
 #import "ViewController.h"
 
 @interface AppDelegate ()
@@ -20,12 +20,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    self.window.backgroundColor = [UIColor whiteColor];
-    TTLoginViewViewController * loginVC = [[TTLoginViewViewController alloc] init];
-//    ViewController * vc = [[ViewController alloc] init];
-    [self.window setRootViewController:loginVC];
-    [self.window makeKeyAndVisible];
+//    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    TTLoginViewViewController * loginVC = [[TTLoginViewViewController alloc] init];
+//
+//    [self.window setRootViewController:loginVC];
+//    [self.window makeKeyAndVisible];
     return YES;
 }
 
