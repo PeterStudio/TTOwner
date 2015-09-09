@@ -19,6 +19,8 @@
 		09C781CB1B5F83460050B73F /* TTViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C781CA1B5F83460050B73F /* TTViewModel.m */; };
 		09C781CE1B5F839D0050B73F /* TTLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C781CD1B5F839D0050B73F /* TTLoginViewModel.m */; };
 		09C781D41B5F86950050B73F /* NSString+LangExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C781D31B5F86950050B73F /* NSString+LangExt.m */; };
+		0B14086E1BA06CE200BA92AC /* TTAppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B14086D1BA06CE200BA92AC /* TTAppService.m */; };
+		0B1408771BA085DA00BA92AC /* RatingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1408761BA085DA00BA92AC /* RatingBar.m */; };
 		0B2F37D71B9F3626003EC1CB /* TTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F37D61B9F3626003EC1CB /* TTBaseTableViewController.m */; };
 		0B2F37DA1B9F383D003EC1CB /* TTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F37D91B9F383D003EC1CB /* TTLoginViewController.m */; };
 		5A5CAD3EDC8965EACB51285A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 724BD81A907B0CD794E779A2 /* libPods.a */; };
@@ -59,6 +61,10 @@
 		09C781CD1B5F839D0050B73F /* TTLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLoginViewModel.m; sourceTree = "<group>"; };
 		09C781D21B5F86950050B73F /* NSString+LangExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LangExt.h"; sourceTree = "<group>"; };
 		09C781D31B5F86950050B73F /* NSString+LangExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LangExt.m"; sourceTree = "<group>"; };
+		0B14086C1BA06CE200BA92AC /* TTAppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAppService.h; sourceTree = "<group>"; };
+		0B14086D1BA06CE200BA92AC /* TTAppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAppService.m; sourceTree = "<group>"; };
+		0B1408751BA085DA00BA92AC /* RatingBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingBar.h; sourceTree = "<group>"; };
+		0B1408761BA085DA00BA92AC /* RatingBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingBar.m; sourceTree = "<group>"; };
 		0B2F37D51B9F3626003EC1CB /* TTBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBaseTableViewController.h; sourceTree = "<group>"; };
 		0B2F37D61B9F3626003EC1CB /* TTBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseTableViewController.m; sourceTree = "<group>"; };
 		0B2F37D81B9F383D003EC1CB /* TTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLoginViewController.h; sourceTree = "<group>"; };
@@ -125,12 +131,15 @@
 			children = (
 				0B3AA4361B5FBF950000C109 /* ViewController */,
 				09C781D11B5F86810050B73F /* Category */,
-				09C781C41B5F82B70050B73F /* View */,
 				09C781C71B5F82B70050B73F /* ViewModel */,
 				09C664681B5F657B003BE91F /* AppDelegate.h */,
 				09C664691B5F657B003BE91F /* AppDelegate.m */,
 				09C6646B1B5F657B003BE91F /* ViewController.h */,
 				09C6646C1B5F657B003BE91F /* ViewController.m */,
+				0B14086C1BA06CE200BA92AC /* TTAppService.h */,
+				0B14086D1BA06CE200BA92AC /* TTAppService.m */,
+				0B1408751BA085DA00BA92AC /* RatingBar.h */,
+				0B1408761BA085DA00BA92AC /* RatingBar.m */,
 				09C6646E1B5F657B003BE91F /* Main.storyboard */,
 				09C664711B5F657B003BE91F /* Images.xcassets */,
 				09C664731B5F657B003BE91F /* LaunchScreen.xib */,
@@ -164,13 +173,6 @@
 				09C6647F1B5F657B003BE91F /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		09C781C41B5F82B70050B73F /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		09C781C71B5F82B70050B73F /* ViewModel */ = {
@@ -373,6 +375,8 @@
 				09C6646D1B5F657B003BE91F /* ViewController.m in Sources */,
 				09C781CE1B5F839D0050B73F /* TTLoginViewModel.m in Sources */,
 				09C781D41B5F86950050B73F /* NSString+LangExt.m in Sources */,
+				0B1408771BA085DA00BA92AC /* RatingBar.m in Sources */,
+				0B14086E1BA06CE200BA92AC /* TTAppService.m in Sources */,
 				099CCDC61B607A1700B167F0 /* TTBaseViewController.m in Sources */,
 				099CCDC91B607A3300B167F0 /* TTHomeViewController.m in Sources */,
 				0B2F37DA1B9F383D003EC1CB /* TTLoginViewController.m in Sources */,

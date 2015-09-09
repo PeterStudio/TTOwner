@@ -8,6 +8,6 @@
 
 #import "TTBaseTableViewController.h"
 
-@interface TTLoginViewController : TTBaseTableViewController
+@interface TTLoginViewController : TTBaseTableViewController<UITextFieldDelegate>
 
 @end

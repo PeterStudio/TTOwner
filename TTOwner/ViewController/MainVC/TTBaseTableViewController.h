@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TTAppService.h"
+#import "SVProgressHUD.h"
 @interface TTBaseTableViewController : UITableViewController
 
 @end

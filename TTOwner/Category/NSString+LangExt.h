@@ -28,5 +28,6 @@
  */
 - (BOOL)validPassword;
 
+- (NSString *) stringFromMD5;
 
 @end

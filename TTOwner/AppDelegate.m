@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 #import "Macros.h"
 
+#import "TTAppService.h"
 
-#import "ViewController.h"
+#import <AdSupport/AdSupport.h>
 
 @interface AppDelegate ()
 
@@ -26,8 +27,36 @@
 //
 //    [self.window setRootViewController:loginVC];
 //    [self.window makeKeyAndVisible];
+    
+    [self updateVersion];
     return YES;
 }
+
+- (void)updateVersion{
+    NSString *curVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    if (!curVersion) {
+        curVersion=@"1.0";
+    }
+    NSString *imeiStr = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    [[TTAppService sharedManager] request_update_Http_version:curVersion type:@"1" imei:imeiStr success:^(id responseObject) {
+        NSDictionary * jsonObject = responseObject;
+        if ([@"000000" isEqualToString:jsonObject[@"retcode"]]) {
+            NSDictionary * doc = jsonObject[@"doc"];
+            if ([@"0" isEqualToString:doc[@"isUpdate"]]) {
+                UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"有新版本~" message:doc[@"content"] delegate:self cancelButtonTitle:@"稍后更新" otherButtonTitles:@"更新", nil];
+                alert.tag = 100;
+                [alert show];
+            }else{
+                UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"有新版本~" message:doc[@"content"] delegate:self cancelButtonTitle:@"立即更新" otherButtonTitles:nil, nil];
+                alert.tag = 101;
+                [alert show];
+            }
+        }
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
