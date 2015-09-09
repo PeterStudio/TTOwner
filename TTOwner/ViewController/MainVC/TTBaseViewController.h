@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "SVProgressHUD.h"
+#import "TTAppService.h"
 @interface TTBaseViewController : UIViewController
 
 @end

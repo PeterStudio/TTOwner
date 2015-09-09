@@ -7,8 +7,20 @@
 //
 
 #import "TTHomeViewController.h"
+#import "RatingBar.h"
 
-@interface TTHomeViewController ()
+
+@interface TTHomeViewController (){
+    NSDictionary * jsonDic;
+}
+
+@property (strong, nonatomic) IBOutlet UIImageView *headIV;
+@property (strong, nonatomic) IBOutlet UILabel *nameLab;
+@property (strong, nonatomic) IBOutlet UILabel *countLab;
+@property (strong, nonatomic) IBOutlet UILabel *moneyLab;
+@property (strong, nonatomic) IBOutlet UILabel *payLabe;
+@property (strong, nonatomic) IBOutlet UILabel *count1Lab;
+@property (strong, nonatomic) IBOutlet RatingBar *rateBar;
 
 @end
 
@@ -16,7 +28,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    jsonDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"USERDATA"];
+    [_headIV sd_setImageWithURL:[NSURL URLWithString:jsonDic[@"headUrl"]] placeholderImage:[UIImage imageNamed:@"user_head02"]];
+    _nameLab.text = jsonDic[@"name"];
+    _countLab.text = [NSString stringWithFormat:@"被预约%@次",jsonDic[@"frequency"]];
+    
+    _rateBar.isIndicator = YES;
+    [_rateBar setImageDeselected:@"start_icon01" halfSelected:nil fullSelected:@"start_icon01_1" andDelegate:nil];
+    [_rateBar displayRating:[jsonDic[@"star"] floatValue]];
 }
 
 - (void)didReceiveMemoryWarning {

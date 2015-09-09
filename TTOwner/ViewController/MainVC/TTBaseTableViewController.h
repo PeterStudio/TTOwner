@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "TTAppService.h"
 #import "SVProgressHUD.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+
 @interface TTBaseTableViewController : UITableViewController
 
 @end

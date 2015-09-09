@@ -21,6 +21,13 @@
 		09C781D41B5F86950050B73F /* NSString+LangExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C781D31B5F86950050B73F /* NSString+LangExt.m */; };
 		0B14086E1BA06CE200BA92AC /* TTAppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B14086D1BA06CE200BA92AC /* TTAppService.m */; };
 		0B1408771BA085DA00BA92AC /* RatingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1408761BA085DA00BA92AC /* RatingBar.m */; };
+		0B14087A1BA0E89100BA92AC /* TTPayHitoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1408791BA0E89100BA92AC /* TTPayHitoryViewController.m */; };
+		0B14087D1BA0E8CD00BA92AC /* TTMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B14087C1BA0E8CD00BA92AC /* TTMineViewController.m */; };
+		0B1408801BA0EDB400BA92AC /* TTMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B14087F1BA0EDB400BA92AC /* TTMoreViewController.m */; };
+		0B1408881BA0EFD300BA92AC /* TTServiceAgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1408871BA0EFD300BA92AC /* TTServiceAgreementViewController.m */; };
+		0B14088B1BA0EFE500BA92AC /* TTSuitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B14088A1BA0EFE500BA92AC /* TTSuitViewController.m */; };
+		0B14088E1BA0F00200BA92AC /* TTCooperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B14088D1BA0F00200BA92AC /* TTCooperationViewController.m */; };
+		0B1408911BA0F02600BA92AC /* TTInvitationFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1408901BA0F02600BA92AC /* TTInvitationFriendsViewController.m */; };
 		0B2F37D71B9F3626003EC1CB /* TTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F37D61B9F3626003EC1CB /* TTBaseTableViewController.m */; };
 		0B2F37DA1B9F383D003EC1CB /* TTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F37D91B9F383D003EC1CB /* TTLoginViewController.m */; };
 		5A5CAD3EDC8965EACB51285A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 724BD81A907B0CD794E779A2 /* libPods.a */; };
@@ -65,6 +72,20 @@
 		0B14086D1BA06CE200BA92AC /* TTAppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAppService.m; sourceTree = "<group>"; };
 		0B1408751BA085DA00BA92AC /* RatingBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingBar.h; sourceTree = "<group>"; };
 		0B1408761BA085DA00BA92AC /* RatingBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingBar.m; sourceTree = "<group>"; };
+		0B1408781BA0E89100BA92AC /* TTPayHitoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPayHitoryViewController.h; sourceTree = "<group>"; };
+		0B1408791BA0E89100BA92AC /* TTPayHitoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPayHitoryViewController.m; sourceTree = "<group>"; };
+		0B14087B1BA0E8CD00BA92AC /* TTMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMineViewController.h; sourceTree = "<group>"; };
+		0B14087C1BA0E8CD00BA92AC /* TTMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMineViewController.m; sourceTree = "<group>"; };
+		0B14087E1BA0EDB400BA92AC /* TTMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoreViewController.h; sourceTree = "<group>"; };
+		0B14087F1BA0EDB400BA92AC /* TTMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoreViewController.m; sourceTree = "<group>"; };
+		0B1408861BA0EFD300BA92AC /* TTServiceAgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTServiceAgreementViewController.h; sourceTree = "<group>"; };
+		0B1408871BA0EFD300BA92AC /* TTServiceAgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTServiceAgreementViewController.m; sourceTree = "<group>"; };
+		0B1408891BA0EFE500BA92AC /* TTSuitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSuitViewController.h; sourceTree = "<group>"; };
+		0B14088A1BA0EFE500BA92AC /* TTSuitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSuitViewController.m; sourceTree = "<group>"; };
+		0B14088C1BA0F00200BA92AC /* TTCooperationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCooperationViewController.h; sourceTree = "<group>"; };
+		0B14088D1BA0F00200BA92AC /* TTCooperationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCooperationViewController.m; sourceTree = "<group>"; };
+		0B14088F1BA0F02600BA92AC /* TTInvitationFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTInvitationFriendsViewController.h; sourceTree = "<group>"; };
+		0B1408901BA0F02600BA92AC /* TTInvitationFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTInvitationFriendsViewController.m; sourceTree = "<group>"; };
 		0B2F37D51B9F3626003EC1CB /* TTBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBaseTableViewController.h; sourceTree = "<group>"; };
 		0B2F37D61B9F3626003EC1CB /* TTBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseTableViewController.m; sourceTree = "<group>"; };
 		0B2F37D81B9F383D003EC1CB /* TTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLoginViewController.h; sourceTree = "<group>"; };
@@ -102,6 +123,20 @@
 				0B2F37D61B9F3626003EC1CB /* TTBaseTableViewController.m */,
 				099CCDC71B607A3300B167F0 /* TTHomeViewController.h */,
 				099CCDC81B607A3300B167F0 /* TTHomeViewController.m */,
+				0B1408781BA0E89100BA92AC /* TTPayHitoryViewController.h */,
+				0B1408791BA0E89100BA92AC /* TTPayHitoryViewController.m */,
+				0B14087B1BA0E8CD00BA92AC /* TTMineViewController.h */,
+				0B14087C1BA0E8CD00BA92AC /* TTMineViewController.m */,
+				0B14087E1BA0EDB400BA92AC /* TTMoreViewController.h */,
+				0B14087F1BA0EDB400BA92AC /* TTMoreViewController.m */,
+				0B1408861BA0EFD300BA92AC /* TTServiceAgreementViewController.h */,
+				0B1408871BA0EFD300BA92AC /* TTServiceAgreementViewController.m */,
+				0B1408891BA0EFE500BA92AC /* TTSuitViewController.h */,
+				0B14088A1BA0EFE500BA92AC /* TTSuitViewController.m */,
+				0B14088C1BA0F00200BA92AC /* TTCooperationViewController.h */,
+				0B14088D1BA0F00200BA92AC /* TTCooperationViewController.m */,
+				0B14088F1BA0F02600BA92AC /* TTInvitationFriendsViewController.h */,
+				0B1408901BA0F02600BA92AC /* TTInvitationFriendsViewController.m */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -372,15 +407,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B2F37D71B9F3626003EC1CB /* TTBaseTableViewController.m in Sources */,
+				0B1408881BA0EFD300BA92AC /* TTServiceAgreementViewController.m in Sources */,
 				09C6646D1B5F657B003BE91F /* ViewController.m in Sources */,
 				09C781CE1B5F839D0050B73F /* TTLoginViewModel.m in Sources */,
+				0B14088E1BA0F00200BA92AC /* TTCooperationViewController.m in Sources */,
 				09C781D41B5F86950050B73F /* NSString+LangExt.m in Sources */,
+				0B14087A1BA0E89100BA92AC /* TTPayHitoryViewController.m in Sources */,
 				0B1408771BA085DA00BA92AC /* RatingBar.m in Sources */,
+				0B1408801BA0EDB400BA92AC /* TTMoreViewController.m in Sources */,
+				0B14088B1BA0EFE500BA92AC /* TTSuitViewController.m in Sources */,
 				0B14086E1BA06CE200BA92AC /* TTAppService.m in Sources */,
 				099CCDC61B607A1700B167F0 /* TTBaseViewController.m in Sources */,
 				099CCDC91B607A3300B167F0 /* TTHomeViewController.m in Sources */,
+				0B1408911BA0F02600BA92AC /* TTInvitationFriendsViewController.m in Sources */,
 				0B2F37DA1B9F383D003EC1CB /* TTLoginViewController.m in Sources */,
 				09C781CB1B5F83460050B73F /* TTViewModel.m in Sources */,
+				0B14087D1BA0E8CD00BA92AC /* TTMineViewController.m in Sources */,
 				09C6646A1B5F657B003BE91F /* AppDelegate.m in Sources */,
 				09C664671B5F657B003BE91F /* main.m in Sources */,
 			);

@@ -42,7 +42,7 @@
         curVersion=@"1.0";
     }
     NSString *imeiStr = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
-    
+    [SVProgressHUD showWithStatus:@"加载中" maskType:SVProgressHUDMaskTypeClear];
     [[TTAppService sharedManager] request_Login_Http_username:self.usernameTF.text pas:self.usernameTF.text system:@"1" version:curVersion imei:imeiStr lat:@"" lng:@"" success:^(id responseObject) {
         NSDictionary * jsonDic = responseObject;
         if ([@"000000" isEqualToString:jsonDic[@"retcode"]]) {
