@@ -1,40 +1,40 @@
 //
-//  TTWorkSitesViewController.m
+//  TTSearchViewController.m
 //  TTOwner
 //
 //  Created by Baby on 15/9/10.
 //  Copyright (c) 2015年 duwen. All rights reserved.
 //
 
-#import "TTWorkSitesViewController.h"
-#import "TTWorkerTableViewCell.h"
-@interface TTWorkSitesViewController ()
+#import "TTSearchViewController.h"
+#import "TTSearchTableViewCell.h"
+
+
+@interface TTSearchViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *qianyueLab;
 @property (weak, nonatomic) IBOutlet UILabel *yuyueLab;
-@property (weak, nonatomic) IBOutlet UILabel *qiatanLab;
-@property (weak, nonatomic) IBOutlet UILabel *feeLab;
-@property (weak, nonatomic) IBOutlet UILabel *moneyLab;
+@property (weak, nonatomic) IBOutlet UILabel *qiaotanLab;
 
 @end
 
-@implementation TTWorkSitesViewController
+@implementation TTSearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 2;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    TTSearchTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"SearchCellidentifier"];
+    return cell;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    TTWorkerTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"WorkerIdentifier"];
-    return cell;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 112;
 }
 
 - (void)didReceiveMemoryWarning {

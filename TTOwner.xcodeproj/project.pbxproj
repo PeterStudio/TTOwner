@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09769FF11BA1A5C0005108CE /* TTSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09769FF01BA1A5C0005108CE /* TTSearchViewController.m */; };
+		09769FF41BA1A8E5005108CE /* UIButton+LangExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 09769FF31BA1A8E5005108CE /* UIButton+LangExt.m */; };
+		09769FF71BA1AD0C005108CE /* TTSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09769FF61BA1AD0C005108CE /* TTSearchTableViewCell.m */; };
 		099CCDC61B607A1700B167F0 /* TTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099CCDC51B607A1700B167F0 /* TTBaseViewController.m */; };
 		099CCDC91B607A3300B167F0 /* TTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099CCDC81B607A3300B167F0 /* TTHomeViewController.m */; };
 		09BA5FC41BA1422E00107ECA /* TTPayHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA5FC31BA1422E00107ECA /* TTPayHistoryTableViewCell.m */; };
 		09BA5FC71BA1487200107ECA /* TTWorkSitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA5FC61BA1487200107ECA /* TTWorkSitesViewController.m */; };
 		09BA5FCA1BA1488A00107ECA /* TTWorkerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA5FC91BA1488A00107ECA /* TTWorkerTableViewCell.m */; };
+		09BA5FD11BA196E800107ECA /* TTPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA5FD01BA196E800107ECA /* TTPayViewController.m */; };
 		09C664671B5F657B003BE91F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C664661B5F657B003BE91F /* main.m */; };
 		09C6646A1B5F657B003BE91F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C664691B5F657B003BE91F /* AppDelegate.m */; };
 		09C6646D1B5F657B003BE91F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C6646C1B5F657B003BE91F /* ViewController.m */; };
@@ -47,6 +51,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09769FEF1BA1A5C0005108CE /* TTSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSearchViewController.h; sourceTree = "<group>"; };
+		09769FF01BA1A5C0005108CE /* TTSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSearchViewController.m; sourceTree = "<group>"; };
+		09769FF21BA1A8E5005108CE /* UIButton+LangExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+LangExt.h"; sourceTree = "<group>"; };
+		09769FF31BA1A8E5005108CE /* UIButton+LangExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LangExt.m"; sourceTree = "<group>"; };
+		09769FF51BA1AD0C005108CE /* TTSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSearchTableViewCell.h; sourceTree = "<group>"; };
+		09769FF61BA1AD0C005108CE /* TTSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSearchTableViewCell.m; sourceTree = "<group>"; };
 		099CCDC41B607A1700B167F0 /* TTBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBaseViewController.h; sourceTree = "<group>"; };
 		099CCDC51B607A1700B167F0 /* TTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseViewController.m; sourceTree = "<group>"; };
 		099CCDC71B607A3300B167F0 /* TTHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTHomeViewController.h; sourceTree = "<group>"; };
@@ -57,6 +67,8 @@
 		09BA5FC61BA1487200107ECA /* TTWorkSitesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTWorkSitesViewController.m; sourceTree = "<group>"; };
 		09BA5FC81BA1488A00107ECA /* TTWorkerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTWorkerTableViewCell.h; sourceTree = "<group>"; };
 		09BA5FC91BA1488A00107ECA /* TTWorkerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTWorkerTableViewCell.m; sourceTree = "<group>"; };
+		09BA5FCF1BA196E800107ECA /* TTPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPayViewController.h; sourceTree = "<group>"; };
+		09BA5FD01BA196E800107ECA /* TTPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPayViewController.m; sourceTree = "<group>"; };
 		09C664611B5F657B003BE91F /* TTOwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTOwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C664651B5F657B003BE91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09C664661B5F657B003BE91F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -132,10 +144,16 @@
 				0B2F37D61B9F3626003EC1CB /* TTBaseTableViewController.m */,
 				099CCDC71B607A3300B167F0 /* TTHomeViewController.h */,
 				099CCDC81B607A3300B167F0 /* TTHomeViewController.m */,
+				09BA5FCF1BA196E800107ECA /* TTPayViewController.h */,
+				09BA5FD01BA196E800107ECA /* TTPayViewController.m */,
 				0B1408781BA0E89100BA92AC /* TTPayHitoryViewController.h */,
 				0B1408791BA0E89100BA92AC /* TTPayHitoryViewController.m */,
 				09BA5FC21BA1422E00107ECA /* TTPayHistoryTableViewCell.h */,
 				09BA5FC31BA1422E00107ECA /* TTPayHistoryTableViewCell.m */,
+				09769FEF1BA1A5C0005108CE /* TTSearchViewController.h */,
+				09769FF01BA1A5C0005108CE /* TTSearchViewController.m */,
+				09769FF51BA1AD0C005108CE /* TTSearchTableViewCell.h */,
+				09769FF61BA1AD0C005108CE /* TTSearchTableViewCell.m */,
 				09BA5FC51BA1487200107ECA /* TTWorkSitesViewController.h */,
 				09BA5FC61BA1487200107ECA /* TTWorkSitesViewController.m */,
 				09BA5FC81BA1488A00107ECA /* TTWorkerTableViewCell.h */,
@@ -249,6 +267,8 @@
 			children = (
 				09C781D21B5F86950050B73F /* NSString+LangExt.h */,
 				09C781D31B5F86950050B73F /* NSString+LangExt.m */,
+				09769FF21BA1A8E5005108CE /* UIButton+LangExt.h */,
+				09769FF31BA1A8E5005108CE /* UIButton+LangExt.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -424,13 +444,17 @@
 				0B2F37D71B9F3626003EC1CB /* TTBaseTableViewController.m in Sources */,
 				0B1408881BA0EFD300BA92AC /* TTServiceAgreementViewController.m in Sources */,
 				09C6646D1B5F657B003BE91F /* ViewController.m in Sources */,
+				09BA5FD11BA196E800107ECA /* TTPayViewController.m in Sources */,
 				09C781CE1B5F839D0050B73F /* TTLoginViewModel.m in Sources */,
+				09769FF41BA1A8E5005108CE /* UIButton+LangExt.m in Sources */,
 				0B14088E1BA0F00200BA92AC /* TTCooperationViewController.m in Sources */,
 				09C781D41B5F86950050B73F /* NSString+LangExt.m in Sources */,
 				0B14087A1BA0E89100BA92AC /* TTPayHitoryViewController.m in Sources */,
+				09769FF11BA1A5C0005108CE /* TTSearchViewController.m in Sources */,
 				0B1408771BA085DA00BA92AC /* RatingBar.m in Sources */,
 				0B1408801BA0EDB400BA92AC /* TTMoreViewController.m in Sources */,
 				09BA5FC41BA1422E00107ECA /* TTPayHistoryTableViewCell.m in Sources */,
+				09769FF71BA1AD0C005108CE /* TTSearchTableViewCell.m in Sources */,
 				0B14088B1BA0EFE500BA92AC /* TTSuitViewController.m in Sources */,
 				09BA5FCA1BA1488A00107ECA /* TTWorkerTableViewCell.m in Sources */,
 				0B14086E1BA06CE200BA92AC /* TTAppService.m in Sources */,
