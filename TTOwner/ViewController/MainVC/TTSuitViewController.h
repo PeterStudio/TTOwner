@@ -8,6 +8,6 @@
 
 #import "TTBaseViewController.h"
 
-@interface TTSuitViewController : TTBaseViewController
+@interface TTSuitViewController : TTBaseViewController<UITextViewDelegate>
 
 @end

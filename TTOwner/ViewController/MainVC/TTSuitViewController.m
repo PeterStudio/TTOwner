@@ -12,6 +12,7 @@
     NSDictionary * jsonDic;
 }
 @property (strong, nonatomic) IBOutlet UITextView *textV;
+@property (weak, nonatomic) IBOutlet UILabel *placeholdLab;
 
 @end
 
@@ -42,20 +43,23 @@
     } failure:^(NSError *error) {
        [SVProgressHUD showErrorWithStatus:@"请求失败，请稍后再试"];
     }];
-
-    
-//    [[TTAppService sharedManager] request_modifyInfo_Http_userId:jsonDic[@""] oldPwd:self.pswTF1.text pwd:self.pswTF2.text success:^(id responseObject) {
-//        if ([@"000000" isEqualToString:jsonDic[@"retcode"]]) {
-//            [SVProgressHUD showSuccessWithStatus:jsonDic[@"retinfo"]];
-//            [self.navigationController popViewControllerAnimated:YES];
-//        }else{
-//            [SVProgressHUD showErrorWithStatus:jsonDic[@"retinfo"]];
-//        }
-//    } failure:^(NSError *error) {
-//        [SVProgressHUD showErrorWithStatus:@"请求失败，请稍后再试"];
-//    }];
 }
 
+- (void)textViewDidChange:(UITextView *)textView{
+    _placeholdLab.hidden = textView.text.length > 0;
+    if (textView.markedTextRange == nil && textView.text.length > 200) {
+        NSString * str = textView.text;
+        textView.text = [str substringToIndex:200];
+    }
+}
+
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    if ([text isEqualToString:@"\n"])
+    {
+        [textView resignFirstResponder];return NO;
+    }
+    return YES;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

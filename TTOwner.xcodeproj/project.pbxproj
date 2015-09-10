@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		099CCDC61B607A1700B167F0 /* TTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099CCDC51B607A1700B167F0 /* TTBaseViewController.m */; };
 		099CCDC91B607A3300B167F0 /* TTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099CCDC81B607A3300B167F0 /* TTHomeViewController.m */; };
+		09BA5FC41BA1422E00107ECA /* TTPayHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA5FC31BA1422E00107ECA /* TTPayHistoryTableViewCell.m */; };
+		09BA5FC71BA1487200107ECA /* TTWorkSitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA5FC61BA1487200107ECA /* TTWorkSitesViewController.m */; };
+		09BA5FCA1BA1488A00107ECA /* TTWorkerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA5FC91BA1488A00107ECA /* TTWorkerTableViewCell.m */; };
 		09C664671B5F657B003BE91F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C664661B5F657B003BE91F /* main.m */; };
 		09C6646A1B5F657B003BE91F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C664691B5F657B003BE91F /* AppDelegate.m */; };
 		09C6646D1B5F657B003BE91F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C6646C1B5F657B003BE91F /* ViewController.m */; };
@@ -48,6 +51,12 @@
 		099CCDC51B607A1700B167F0 /* TTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseViewController.m; sourceTree = "<group>"; };
 		099CCDC71B607A3300B167F0 /* TTHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTHomeViewController.h; sourceTree = "<group>"; };
 		099CCDC81B607A3300B167F0 /* TTHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTHomeViewController.m; sourceTree = "<group>"; };
+		09BA5FC21BA1422E00107ECA /* TTPayHistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPayHistoryTableViewCell.h; sourceTree = "<group>"; };
+		09BA5FC31BA1422E00107ECA /* TTPayHistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPayHistoryTableViewCell.m; sourceTree = "<group>"; };
+		09BA5FC51BA1487200107ECA /* TTWorkSitesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTWorkSitesViewController.h; sourceTree = "<group>"; };
+		09BA5FC61BA1487200107ECA /* TTWorkSitesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTWorkSitesViewController.m; sourceTree = "<group>"; };
+		09BA5FC81BA1488A00107ECA /* TTWorkerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTWorkerTableViewCell.h; sourceTree = "<group>"; };
+		09BA5FC91BA1488A00107ECA /* TTWorkerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTWorkerTableViewCell.m; sourceTree = "<group>"; };
 		09C664611B5F657B003BE91F /* TTOwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTOwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C664651B5F657B003BE91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09C664661B5F657B003BE91F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -125,6 +134,12 @@
 				099CCDC81B607A3300B167F0 /* TTHomeViewController.m */,
 				0B1408781BA0E89100BA92AC /* TTPayHitoryViewController.h */,
 				0B1408791BA0E89100BA92AC /* TTPayHitoryViewController.m */,
+				09BA5FC21BA1422E00107ECA /* TTPayHistoryTableViewCell.h */,
+				09BA5FC31BA1422E00107ECA /* TTPayHistoryTableViewCell.m */,
+				09BA5FC51BA1487200107ECA /* TTWorkSitesViewController.h */,
+				09BA5FC61BA1487200107ECA /* TTWorkSitesViewController.m */,
+				09BA5FC81BA1488A00107ECA /* TTWorkerTableViewCell.h */,
+				09BA5FC91BA1488A00107ECA /* TTWorkerTableViewCell.m */,
 				0B14087B1BA0E8CD00BA92AC /* TTMineViewController.h */,
 				0B14087C1BA0E8CD00BA92AC /* TTMineViewController.m */,
 				0B14087E1BA0EDB400BA92AC /* TTMoreViewController.h */,
@@ -415,11 +430,14 @@
 				0B14087A1BA0E89100BA92AC /* TTPayHitoryViewController.m in Sources */,
 				0B1408771BA085DA00BA92AC /* RatingBar.m in Sources */,
 				0B1408801BA0EDB400BA92AC /* TTMoreViewController.m in Sources */,
+				09BA5FC41BA1422E00107ECA /* TTPayHistoryTableViewCell.m in Sources */,
 				0B14088B1BA0EFE500BA92AC /* TTSuitViewController.m in Sources */,
+				09BA5FCA1BA1488A00107ECA /* TTWorkerTableViewCell.m in Sources */,
 				0B14086E1BA06CE200BA92AC /* TTAppService.m in Sources */,
 				099CCDC61B607A1700B167F0 /* TTBaseViewController.m in Sources */,
 				099CCDC91B607A3300B167F0 /* TTHomeViewController.m in Sources */,
 				0B1408911BA0F02600BA92AC /* TTInvitationFriendsViewController.m in Sources */,
+				09BA5FC71BA1487200107ECA /* TTWorkSitesViewController.m in Sources */,
 				0B2F37DA1B9F383D003EC1CB /* TTLoginViewController.m in Sources */,
 				09C781CB1B5F83460050B73F /* TTViewModel.m in Sources */,
 				0B14087D1BA0E8CD00BA92AC /* TTMineViewController.m in Sources */,

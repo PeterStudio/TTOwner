@@ -1,23 +1,35 @@
 //
-//  TTBaseViewController.m
+//  TTWorkSitesViewController.m
 //  TTOwner
 //
-//  Created by Baby on 15/7/23.
+//  Created by Baby on 15/9/10.
 //  Copyright (c) 2015年 duwen. All rights reserved.
 //
 
-#import "TTBaseViewController.h"
-
-@interface TTBaseViewController ()
+#import "TTWorkSitesViewController.h"
+#import "TTWorkerTableViewCell.h"
+@interface TTWorkSitesViewController ()
 
 @end
 
-@implementation TTBaseViewController
+@implementation TTWorkSitesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view setBackgroundColor:[UIColor colorWithRed:233/255.0 green:233/255.0 blue:233/255.0 alpha:1]];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    TTWorkerTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"WorkerIdentifier"];
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {

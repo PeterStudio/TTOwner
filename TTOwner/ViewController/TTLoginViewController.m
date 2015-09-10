@@ -27,6 +27,9 @@
 - (IBAction)loginAction:(id)sender {
     [self.view endEditing:YES];
 
+    [self performSegueWithIdentifier:@"LoginSuccessID" sender:nil];
+    return;
+    
     if (![self.usernameTF.text validChinesePhoneNumber]) {
         [SVProgressHUD showErrorWithStatus:@"请输入正确的手机号"];
         return;

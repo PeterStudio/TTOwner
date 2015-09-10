@@ -7,8 +7,11 @@
 //
 
 #import "TTPayHitoryViewController.h"
+#import "TTPayHistoryTableViewCell.h"
+
 
 @interface TTPayHitoryViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *accountLab;
 
 @end
 
@@ -18,6 +21,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 2;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    TTPayHistoryTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"PayHistoryIdentifier"];
+    return cell;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
