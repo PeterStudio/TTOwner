@@ -126,6 +126,7 @@ static dispatch_once_t predicate;
     NSDictionary * params = @{@"version":_version,@"type":_type,@"imei":_imei};
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer =  [AFHTTPRequestSerializer serializer];
+    NSLog(@"params %@",params);
     [manager POST:SERVICE(@"update.do") parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (success) {
             success(responseObject);
