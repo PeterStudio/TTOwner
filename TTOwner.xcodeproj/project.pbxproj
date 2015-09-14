@@ -22,7 +22,6 @@
 		09C664701B5F657B003BE91F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09C6646E1B5F657B003BE91F /* Main.storyboard */; };
 		09C664721B5F657B003BE91F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09C664711B5F657B003BE91F /* Images.xcassets */; };
 		09C664751B5F657B003BE91F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C664731B5F657B003BE91F /* LaunchScreen.xib */; };
-		09C664811B5F657B003BE91F /* TTOwnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C664801B5F657B003BE91F /* TTOwnerTests.m */; };
 		09C781CB1B5F83460050B73F /* TTViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C781CA1B5F83460050B73F /* TTViewModel.m */; };
 		09C781CE1B5F839D0050B73F /* TTLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C781CD1B5F839D0050B73F /* TTLoginViewModel.m */; };
 		09C781D41B5F86950050B73F /* NSString+LangExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C781D31B5F86950050B73F /* NSString+LangExt.m */; };
@@ -39,16 +38,6 @@
 		0B2F37DA1B9F383D003EC1CB /* TTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F37D91B9F383D003EC1CB /* TTLoginViewController.m */; };
 		5A5CAD3EDC8965EACB51285A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 724BD81A907B0CD794E779A2 /* libPods.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		09C6647B1B5F657B003BE91F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09C664591B5F657B003BE91F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 09C664601B5F657B003BE91F;
-			remoteInfo = TTOwner;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		09769FEF1BA1A5C0005108CE /* TTSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSearchViewController.h; sourceTree = "<group>"; };
@@ -79,7 +68,6 @@
 		09C6646F1B5F657B003BE91F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09C664711B5F657B003BE91F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		09C664741B5F657B003BE91F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		09C6647A1B5F657B003BE91F /* TTOwnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTOwnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C6647F1B5F657B003BE91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09C664801B5F657B003BE91F /* TTOwnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTOwnerTests.m; sourceTree = "<group>"; };
 		09C781C31B5F814E0050B73F /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
@@ -122,13 +110,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A5CAD3EDC8965EACB51285A /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09C664771B5F657B003BE91F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				09C664611B5F657B003BE91F /* TTOwner.app */,
-				09C6647A1B5F657B003BE91F /* TTOwnerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -322,24 +302,6 @@
 			productReference = 09C664611B5F657B003BE91F /* TTOwner.app */;
 			productType = "com.apple.product-type.application";
 		};
-		09C664791B5F657B003BE91F /* TTOwnerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 09C664871B5F657B003BE91F /* Build configuration list for PBXNativeTarget "TTOwnerTests" */;
-			buildPhases = (
-				09C664761B5F657B003BE91F /* Sources */,
-				09C664771B5F657B003BE91F /* Frameworks */,
-				09C664781B5F657B003BE91F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				09C6647C1B5F657B003BE91F /* PBXTargetDependency */,
-			);
-			name = TTOwnerTests;
-			productName = TTOwnerTests;
-			productReference = 09C6647A1B5F657B003BE91F /* TTOwnerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -352,15 +314,12 @@
 				TargetAttributes = {
 					09C664601B5F657B003BE91F = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = FHRN25K2EQ;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 0;
 							};
 						};
-					};
-					09C664791B5F657B003BE91F = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = 09C664601B5F657B003BE91F;
 					};
 				};
 			};
@@ -378,7 +337,6 @@
 			projectRoot = "";
 			targets = (
 				09C664601B5F657B003BE91F /* TTOwner */,
-				09C664791B5F657B003BE91F /* TTOwnerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -391,13 +349,6 @@
 				09C664701B5F657B003BE91F /* Main.storyboard in Resources */,
 				09C664751B5F657B003BE91F /* LaunchScreen.xib in Resources */,
 				09C664721B5F657B003BE91F /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09C664781B5F657B003BE91F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,23 +421,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		09C664761B5F657B003BE91F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09C664811B5F657B003BE91F /* TTOwnerTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		09C6647C1B5F657B003BE91F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 09C664601B5F657B003BE91F /* TTOwner */;
-			targetProxy = 09C6647B1B5F657B003BE91F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		09C6646E1B5F657B003BE91F /* Main.storyboard */ = {
@@ -525,7 +460,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -547,6 +483,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "44a49e7c-c732-46b8-84f9-c9f1c0e2b5e7";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -568,7 +505,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -583,6 +521,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "44a49e7c-c732-46b8-84f9-c9f1c0e2b5e7";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -594,9 +533,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
 				INFOPLIST_FILE = TTOwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "44a49e7c-c732-46b8-84f9-c9f1c0e2b5e7";
 			};
 			name = Debug;
 		};
@@ -606,43 +548,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
 				INFOPLIST_FILE = TTOwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		09C664881B5F657B003BE91F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TTOwnerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTOwner.app/TTOwner";
-			};
-			name = Debug;
-		};
-		09C664891B5F657B003BE91F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TTOwnerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTOwner.app/TTOwner";
+				PROVISIONING_PROFILE = "44a49e7c-c732-46b8-84f9-c9f1c0e2b5e7";
 			};
 			name = Release;
 		};
@@ -663,15 +574,6 @@
 			buildConfigurations = (
 				09C664851B5F657B003BE91F /* Debug */,
 				09C664861B5F657B003BE91F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		09C664871B5F657B003BE91F /* Build configuration list for PBXNativeTarget "TTOwnerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				09C664881B5F657B003BE91F /* Debug */,
-				09C664891B5F657B003BE91F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
