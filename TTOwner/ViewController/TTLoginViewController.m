@@ -52,7 +52,7 @@
             [SVProgressHUD showSuccessWithStatus:jsonDic[@"retinfo"]];
             [[NSUserDefaults standardUserDefaults] setObject:jsonDic[@"doc"] forKey:@"USERDATA"];
             [[NSUserDefaults standardUserDefaults] synchronize];
-            [self performSegueWithIdentifier:@"LoginSuccessID" sender:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"ROOTVIEWCONTROLLER" object:nil];
         }else{
             [SVProgressHUD showErrorWithStatus:jsonDic[@"retinfo"]];
         }

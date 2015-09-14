@@ -21,16 +21,34 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-//    self.window.backgroundColor = [UIColor whiteColor];
+    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    self.window.backgroundColor = [UIColor whiteColor];
 //    TTLoginViewViewController * loginVC = [[TTLoginViewViewController alloc] init];
 //
-//    [self.window setRootViewController:loginVC];
-//    [self.window makeKeyAndVisible];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadRootView) name:@"ROOTVIEWCONTROLLER" object:nil];
+    
+    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    NSDictionary * jsonDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"USERDATA"];
+    UINavigationController * nav;
+    if (jsonDic) {
+        nav = [storyboard instantiateViewControllerWithIdentifier:@"RootNav"];
+    }else{
+        nav = [storyboard instantiateViewControllerWithIdentifier:@"LoginNav"];
+    }
+    [self.window setRootViewController:nav];
+    [self.window makeKeyAndVisible];
     
 //    [self updateVersion];
     return YES;
 }
+
+- (void)reloadRootView{
+    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UINavigationController * nav = [storyboard instantiateViewControllerWithIdentifier:@"RootNav"];
+    [self.window setRootViewController:nav];
+    [self.window makeKeyAndVisible];
+}
+
 
 - (void)updateVersion{
     NSString *curVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
