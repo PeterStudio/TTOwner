@@ -34,11 +34,12 @@
     
     [SVProgressHUD showWithStatus:@"加载中" maskType:SVProgressHUDMaskTypeClear];
     [[TTAppService sharedManager] request_feedback_Http_userId:[jsonDic objectForKey:@"userId"] content:_textV.text success:^(id responseObject) {
-        if ([@"000000" isEqualToString:jsonDic[@"retcode"]]) {
-            [SVProgressHUD showSuccessWithStatus:jsonDic[@"retinfo"]];
+        NSDictionary * dic = responseObject;
+        if ([@"000000" isEqualToString:dic[@"retcode"]]) {
+            [SVProgressHUD showSuccessWithStatus:dic[@"retinfo"]];
             [self.navigationController popViewControllerAnimated:YES];
         }else{
-            [SVProgressHUD showErrorWithStatus:jsonDic[@"retinfo"]];
+            [SVProgressHUD showErrorWithStatus:dic[@"retinfo"]];
         }
     } failure:^(NSError *error) {
        [SVProgressHUD showErrorWithStatus:@"请求失败，请稍后再试"];

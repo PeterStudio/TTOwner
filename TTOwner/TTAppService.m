@@ -12,7 +12,7 @@
 static TTAppService * shareAppServiceManagerInstance = nil;
 static dispatch_once_t predicate;
 
-#define SERVICE(x) [NSString stringWithFormat:@"http://211.149.233.43:8080/platform/decorateForman/%@",x]
+#define SERVICE(x) [NSString stringWithFormat:@"http://118.26.129.11:8080/platform/decorateForman/%@",x]
 
 @implementation TTAppService
 + (TTAppService *)sharedManager{
@@ -41,7 +41,7 @@ static dispatch_once_t predicate;
                               ,@"type":@"0"
                               ,@"lat":_lat
                               ,@"lng":_lng};
-    
+    NSLog(@"params=%@",params);
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer =  [AFHTTPRequestSerializer serializer];
     [manager POST:SERVICE(@"login.do") parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {

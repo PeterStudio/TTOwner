@@ -10,7 +10,9 @@
 #import "TTPayHistoryTableViewCell.h"
 
 
-@interface TTPayHitoryViewController ()
+@interface TTPayHitoryViewController (){
+    NSDictionary * jsonDic;
+}
 @property (weak, nonatomic) IBOutlet UILabel *accountLab;
 
 @end
@@ -19,7 +21,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    jsonDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"USERDATA"];
+    
+    
+//    [SVProgressHUD showWithStatus:@"加载中" maskType:SVProgressHUDMaskTypeClear];
+//    
+//    [[TTAppService sharedManager] request_]
+//    
+//    [[TTAppService sharedManager] request_Login_Http_username:self.usernameTF.text pas:self.passwordTF.text system:@"1" version:curVersion imei:imeiStr lat:@"" lng:@"" success:^(id responseObject) {
+//        NSDictionary * jsonDic = responseObject;
+//        if ([@"000000" isEqualToString:jsonDic[@"retcode"]]) {
+//            [SVProgressHUD showSuccessWithStatus:jsonDic[@"retinfo"]];
+//            [[NSUserDefaults standardUserDefaults] setObject:jsonDic[@"doc"] forKey:@"USERDATA"];
+//            [[NSUserDefaults standardUserDefaults] synchronize];
+//            [self performSegueWithIdentifier:@"LoginSuccessID" sender:nil];
+//        }else{
+//            [SVProgressHUD showErrorWithStatus:jsonDic[@"retinfo"]];
+//        }
+//    } failure:^(NSError *error) {
+//        [SVProgressHUD showErrorWithStatus:@"请求失败，请稍后再试"];
+//    }];
+//    
 }
 
 

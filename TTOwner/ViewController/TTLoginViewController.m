@@ -27,8 +27,8 @@
 - (IBAction)loginAction:(id)sender {
     [self.view endEditing:YES];
 
-    [self performSegueWithIdentifier:@"LoginSuccessID" sender:nil];
-    return;
+//    [self performSegueWithIdentifier:@"LoginSuccessID" sender:nil];
+//    return;
     
     if (![self.usernameTF.text validChinesePhoneNumber]) {
         [SVProgressHUD showErrorWithStatus:@"请输入正确的手机号"];
@@ -46,7 +46,7 @@
     }
     NSString *imeiStr = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     [SVProgressHUD showWithStatus:@"加载中" maskType:SVProgressHUDMaskTypeClear];
-    [[TTAppService sharedManager] request_Login_Http_username:self.usernameTF.text pas:self.usernameTF.text system:@"1" version:curVersion imei:imeiStr lat:@"" lng:@"" success:^(id responseObject) {
+    [[TTAppService sharedManager] request_Login_Http_username:self.usernameTF.text pas:self.passwordTF.text system:@"1" version:curVersion imei:imeiStr lat:@"" lng:@"" success:^(id responseObject) {
         NSDictionary * jsonDic = responseObject;
         if ([@"000000" isEqualToString:jsonDic[@"retcode"]]) {
             [SVProgressHUD showSuccessWithStatus:jsonDic[@"retinfo"]];

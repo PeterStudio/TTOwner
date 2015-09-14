@@ -28,7 +28,7 @@
 //    [self.window setRootViewController:loginVC];
 //    [self.window makeKeyAndVisible];
     
-    [self updateVersion];
+//    [self updateVersion];
     return YES;
 }
 

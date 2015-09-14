@@ -26,6 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     jsonDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"USERDATA"];
+    _headIV.layer.masksToBounds = YES;
+    _headIV.layer.cornerRadius = 30.0f;
+    
     [_headIV sd_setImageWithURL:[NSURL URLWithString:jsonDic[@"headUrl"]] forState:UIControlStateNormal];
     _nameLab.text = jsonDic[@"name"];
     _countLab.text = [NSString stringWithFormat:@"被预约%@次",jsonDic[@"frequency"]];
@@ -51,11 +54,12 @@
     }
     [SVProgressHUD showWithStatus:@"加载中" maskType:SVProgressHUDMaskTypeClear];
     [[TTAppService sharedManager] request_modifyInfo_Http_userId:jsonDic[@""] oldPwd:self.pswTF1.text pwd:self.pswTF2.text success:^(id responseObject) {
-        if ([@"000000" isEqualToString:jsonDic[@"retcode"]]) {
-            [SVProgressHUD showSuccessWithStatus:jsonDic[@"retinfo"]];
+        NSDictionary * dic = responseObject;
+        if ([@"000000" isEqualToString:dic[@"retcode"]]) {
+            [SVProgressHUD showSuccessWithStatus:dic[@"retinfo"]];
             [self.navigationController popViewControllerAnimated:YES];
         }else{
-            [SVProgressHUD showErrorWithStatus:jsonDic[@"retinfo"]];
+            [SVProgressHUD showErrorWithStatus:dic[@"retinfo"]];
         }
     } failure:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:@"请求失败，请稍后再试"];

@@ -28,10 +28,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationItem.leftBarButtonItem = nil;
+    self.navigationController.navigationItem.backBarButtonItem = nil;
+    
     jsonDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"USERDATA"];
+    _headIV.layer.masksToBounds = YES;
+    _headIV.layer.cornerRadius = 30.0f;
     [_headIV sd_setImageWithURL:[NSURL URLWithString:jsonDic[@"headUrl"]] placeholderImage:[UIImage imageNamed:@"user_head02"]];
     _nameLab.text = jsonDic[@"name"];
-    _countLab.text = [NSString stringWithFormat:@"被预约%@次",jsonDic[@"frequency"]];
+    NSString * frequency = jsonDic[@"frequency"]?jsonDic[@"frequency"]:@"0";
+    _countLab.text = [NSString stringWithFormat:@"被预约%@次",frequency];
+    _count1Lab.text = [NSString stringWithFormat:@"%@个",frequency];
     
     _rateBar.isIndicator = YES;
     [_rateBar setImageDeselected:@"start_icon01" halfSelected:nil fullSelected:@"start_icon01_1" andDelegate:nil];
