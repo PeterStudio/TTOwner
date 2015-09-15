@@ -57,5 +57,12 @@
                                success:(void (^)(id responseObject))success
                                failure:(void (^)(NSError *error))failure;
 
+- (void)request_rechargeRecord_Http_userId:(NSString *)_userId
+                                        page:(NSString *)_page
+                                         num:(NSString *)_num
+                                   queryTime:(NSString *)_queryTime
+                                     success:(void (^)(id responseObject))success
+                                     failure:(void (^)(NSError *error))failure;
+
 
 @end

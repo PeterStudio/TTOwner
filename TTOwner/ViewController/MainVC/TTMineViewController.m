@@ -16,6 +16,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *nameLab;
 @property (strong, nonatomic) IBOutlet UILabel *countLab;
 @property (strong, nonatomic) IBOutlet RatingBar *rateBar;
+@property (strong, nonatomic) IBOutlet UITextField *phoneTF;
+
 @property (strong, nonatomic) IBOutlet UITextField *pswTF1;
 @property (strong, nonatomic) IBOutlet UITextField *pswTF2;
 
@@ -34,8 +36,11 @@
     _countLab.text = [NSString stringWithFormat:@"被预约%@次",jsonDic[@"frequency"]];
     
     _rateBar.isIndicator = YES;
-    [_rateBar setImageDeselected:@"start_icon01" halfSelected:nil fullSelected:@"start_icon01_1" andDelegate:nil];
-    [_rateBar displayRating:[jsonDic[@"star"] floatValue]];
+    [_rateBar setImageDeselected:@"star01_1" halfSelected:nil fullSelected:@"star01" andDelegate:nil];
+    float count = jsonDic[@"star"]?[jsonDic[@"star"] floatValue]:1.0;
+    [_rateBar displayRating:count];
+    
+    _phoneTF.placeholder = [[NSUserDefaults standardUserDefaults] objectForKey:@"name"];
     
 }
 
@@ -53,7 +58,7 @@
         return;
     }
     [SVProgressHUD showWithStatus:@"加载中" maskType:SVProgressHUDMaskTypeClear];
-    [[TTAppService sharedManager] request_modifyInfo_Http_userId:jsonDic[@""] oldPwd:self.pswTF1.text pwd:self.pswTF2.text success:^(id responseObject) {
+    [[TTAppService sharedManager] request_modifyInfo_Http_userId:jsonDic[@"userId"] oldPwd:self.pswTF1.text pwd:self.pswTF2.text success:^(id responseObject) {
         NSDictionary * dic = responseObject;
         if ([@"000000" isEqualToString:dic[@"retcode"]]) {
             [SVProgressHUD showSuccessWithStatus:dic[@"retinfo"]];

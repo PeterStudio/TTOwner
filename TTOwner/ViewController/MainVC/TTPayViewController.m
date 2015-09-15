@@ -9,7 +9,9 @@
 #import "TTPayViewController.h"
 #import "UIButton+LangExt.h"
 
-@interface TTPayViewController ()
+@interface TTPayViewController (){
+    NSDictionary * jsonDic;
+}
 @property (weak, nonatomic) IBOutlet UILabel *phoneLab;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *moneyBtnArr;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *payBtnArr;
@@ -23,7 +25,9 @@
     for (UIButton *btn in _moneyBtnArr) {
         [btn setBackground];
     }
-
+    
+    jsonDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"USERDATA"];
+    _phoneLab.text = jsonDic[@"tel"];
 }
 
 - (IBAction)moneyBtnAction:(UIButton *)sender {

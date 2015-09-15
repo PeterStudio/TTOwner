@@ -36,6 +36,14 @@
 		0B1408911BA0F02600BA92AC /* TTInvitationFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1408901BA0F02600BA92AC /* TTInvitationFriendsViewController.m */; };
 		0B2F37D71B9F3626003EC1CB /* TTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F37D61B9F3626003EC1CB /* TTBaseTableViewController.m */; };
 		0B2F37DA1B9F383D003EC1CB /* TTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F37D91B9F383D003EC1CB /* TTLoginViewController.m */; };
+		0BBDEF5A1BA8533F00184D71 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0BBDEF4A1BA8533F00184D71 /* MJRefresh.bundle */; };
+		0BBDEF5B1BA8533F00184D71 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBDEF4D1BA8533F00184D71 /* MJRefreshBaseView.m */; };
+		0BBDEF5C1BA8533F00184D71 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBDEF4F1BA8533F00184D71 /* MJRefreshConst.m */; };
+		0BBDEF5D1BA8533F00184D71 /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBDEF511BA8533F00184D71 /* MJRefreshFooterView.m */; };
+		0BBDEF5E1BA8533F00184D71 /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBDEF531BA8533F00184D71 /* MJRefreshHeaderView.m */; };
+		0BBDEF5F1BA8533F00184D71 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBDEF551BA8533F00184D71 /* UIScrollView+MJExtension.m */; };
+		0BBDEF601BA8533F00184D71 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBDEF571BA8533F00184D71 /* UIScrollView+MJRefresh.m */; };
+		0BBDEF611BA8533F00184D71 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBDEF591BA8533F00184D71 /* UIView+MJExtension.m */; };
 		5A5CAD3EDC8965EACB51285A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 724BD81A907B0CD794E779A2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +107,22 @@
 		0B2F37D61B9F3626003EC1CB /* TTBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseTableViewController.m; sourceTree = "<group>"; };
 		0B2F37D81B9F383D003EC1CB /* TTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLoginViewController.h; sourceTree = "<group>"; };
 		0B2F37D91B9F383D003EC1CB /* TTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLoginViewController.m; sourceTree = "<group>"; };
+		0BBDEF4A1BA8533F00184D71 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		0BBDEF4B1BA8533F00184D71 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		0BBDEF4C1BA8533F00184D71 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
+		0BBDEF4D1BA8533F00184D71 /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
+		0BBDEF4E1BA8533F00184D71 /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
+		0BBDEF4F1BA8533F00184D71 /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
+		0BBDEF501BA8533F00184D71 /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
+		0BBDEF511BA8533F00184D71 /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
+		0BBDEF521BA8533F00184D71 /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
+		0BBDEF531BA8533F00184D71 /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
+		0BBDEF541BA8533F00184D71 /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
+		0BBDEF551BA8533F00184D71 /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
+		0BBDEF561BA8533F00184D71 /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
+		0BBDEF571BA8533F00184D71 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
+		0BBDEF581BA8533F00184D71 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
+		0BBDEF591BA8533F00184D71 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		30B5665F21D8EFB5F6880C6D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5A44EB03FD981B2A5AF5BF50 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		724BD81A907B0CD794E779A2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +201,7 @@
 		09C664631B5F657B003BE91F /* TTOwner */ = {
 			isa = PBXGroup;
 			children = (
+				0BBDEF481BA8533F00184D71 /* Vender */,
 				0B3AA4361B5FBF950000C109 /* ViewController */,
 				09C781D11B5F86810050B73F /* Category */,
 				09C781C71B5F82B70050B73F /* ViewModel */,
@@ -261,6 +286,37 @@
 				0B2F37D91B9F383D003EC1CB /* TTLoginViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0BBDEF481BA8533F00184D71 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				0BBDEF491BA8533F00184D71 /* MJRefresh */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		0BBDEF491BA8533F00184D71 /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				0BBDEF4A1BA8533F00184D71 /* MJRefresh.bundle */,
+				0BBDEF4B1BA8533F00184D71 /* MJRefresh.h */,
+				0BBDEF4C1BA8533F00184D71 /* MJRefreshBaseView.h */,
+				0BBDEF4D1BA8533F00184D71 /* MJRefreshBaseView.m */,
+				0BBDEF4E1BA8533F00184D71 /* MJRefreshConst.h */,
+				0BBDEF4F1BA8533F00184D71 /* MJRefreshConst.m */,
+				0BBDEF501BA8533F00184D71 /* MJRefreshFooterView.h */,
+				0BBDEF511BA8533F00184D71 /* MJRefreshFooterView.m */,
+				0BBDEF521BA8533F00184D71 /* MJRefreshHeaderView.h */,
+				0BBDEF531BA8533F00184D71 /* MJRefreshHeaderView.m */,
+				0BBDEF541BA8533F00184D71 /* UIScrollView+MJExtension.h */,
+				0BBDEF551BA8533F00184D71 /* UIScrollView+MJExtension.m */,
+				0BBDEF561BA8533F00184D71 /* UIScrollView+MJRefresh.h */,
+				0BBDEF571BA8533F00184D71 /* UIScrollView+MJRefresh.m */,
+				0BBDEF581BA8533F00184D71 /* UIView+MJExtension.h */,
+				0BBDEF591BA8533F00184D71 /* UIView+MJExtension.m */,
+			);
+			path = MJRefresh;
 			sourceTree = "<group>";
 		};
 		60A0355647CEAFC2143AA3FB /* Frameworks */ = {
@@ -348,6 +404,7 @@
 			files = (
 				09C664701B5F657B003BE91F /* Main.storyboard in Resources */,
 				09C664751B5F657B003BE91F /* LaunchScreen.xib in Resources */,
+				0BBDEF5A1BA8533F00184D71 /* MJRefresh.bundle in Resources */,
 				09C664721B5F657B003BE91F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,14 +455,18 @@
 				09BA5FD11BA196E800107ECA /* TTPayViewController.m in Sources */,
 				09C781CE1B5F839D0050B73F /* TTLoginViewModel.m in Sources */,
 				09769FF41BA1A8E5005108CE /* UIButton+LangExt.m in Sources */,
+				0BBDEF5E1BA8533F00184D71 /* MJRefreshHeaderView.m in Sources */,
+				0BBDEF5B1BA8533F00184D71 /* MJRefreshBaseView.m in Sources */,
 				0B14088E1BA0F00200BA92AC /* TTCooperationViewController.m in Sources */,
 				09C781D41B5F86950050B73F /* NSString+LangExt.m in Sources */,
 				0B14087A1BA0E89100BA92AC /* TTPayHitoryViewController.m in Sources */,
 				09769FF11BA1A5C0005108CE /* TTSearchViewController.m in Sources */,
+				0BBDEF601BA8533F00184D71 /* UIScrollView+MJRefresh.m in Sources */,
 				0B1408771BA085DA00BA92AC /* RatingBar.m in Sources */,
 				0B1408801BA0EDB400BA92AC /* TTMoreViewController.m in Sources */,
 				09BA5FC41BA1422E00107ECA /* TTPayHistoryTableViewCell.m in Sources */,
 				09769FF71BA1AD0C005108CE /* TTSearchTableViewCell.m in Sources */,
+				0BBDEF5D1BA8533F00184D71 /* MJRefreshFooterView.m in Sources */,
 				0B14088B1BA0EFE500BA92AC /* TTSuitViewController.m in Sources */,
 				09BA5FCA1BA1488A00107ECA /* TTWorkerTableViewCell.m in Sources */,
 				0B14086E1BA06CE200BA92AC /* TTAppService.m in Sources */,
@@ -415,8 +476,11 @@
 				09BA5FC71BA1487200107ECA /* TTWorkSitesViewController.m in Sources */,
 				0B2F37DA1B9F383D003EC1CB /* TTLoginViewController.m in Sources */,
 				09C781CB1B5F83460050B73F /* TTViewModel.m in Sources */,
+				0BBDEF5C1BA8533F00184D71 /* MJRefreshConst.m in Sources */,
 				0B14087D1BA0E8CD00BA92AC /* TTMineViewController.m in Sources */,
 				09C6646A1B5F657B003BE91F /* AppDelegate.m in Sources */,
+				0BBDEF5F1BA8533F00184D71 /* UIScrollView+MJExtension.m in Sources */,
+				0BBDEF611BA8533F00184D71 /* UIView+MJExtension.m in Sources */,
 				09C664671B5F657B003BE91F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,8 +524,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wen Du (6WWFTZ4U92)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wen Du (6WWFTZ4U92)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -483,7 +547,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "44a49e7c-c732-46b8-84f9-c9f1c0e2b5e7";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -505,8 +569,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wen Du (6WWFTZ4U92)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wen Du (6WWFTZ4U92)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -521,7 +585,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "44a49e7c-c732-46b8-84f9-c9f1c0e2b5e7";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -533,12 +597,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wen Du (6WWFTZ4U92)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wen Du (6WWFTZ4U92)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
 				INFOPLIST_FILE = TTOwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "44a49e7c-c732-46b8-84f9-c9f1c0e2b5e7";
 			};
 			name = Debug;
 		};
@@ -548,12 +612,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wen Du (6WWFTZ4U92)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wen Du (6WWFTZ4U92)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
 				INFOPLIST_FILE = TTOwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "44a49e7c-c732-46b8-84f9-c9f1c0e2b5e7";
 			};
 			name = Release;
 		};

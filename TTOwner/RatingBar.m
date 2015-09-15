@@ -50,7 +50,7 @@
     halfSelectedImage = halfSelectedName == nil ? unSelectedImage : [UIImage imageNamed:halfSelectedName];
     fullSelectedImage = [UIImage imageNamed:fullSelectedName];
     
-//    height = 15.0,width = 18.2;
+    _height = 15.0,_width = 18.2;
     
 //    if (height < [fullSelectedImage size].height) {
 //        height = [fullSelectedImage size].height;

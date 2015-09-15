@@ -32,6 +32,7 @@
     self.navigationController.navigationItem.backBarButtonItem = nil;
     
     jsonDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"USERDATA"];
+    
     _headIV.layer.masksToBounds = YES;
     _headIV.layer.cornerRadius = 30.0f;
     [_headIV sd_setImageWithURL:[NSURL URLWithString:jsonDic[@"headUrl"]] placeholderImage:[UIImage imageNamed:@"user_head02"]];
@@ -40,9 +41,13 @@
     _countLab.text = [NSString stringWithFormat:@"被预约%@次",frequency];
     _count1Lab.text = [NSString stringWithFormat:@"%@个",frequency];
     
+    
+
+    
     _rateBar.isIndicator = YES;
-    [_rateBar setImageDeselected:@"start_icon01" halfSelected:nil fullSelected:@"start_icon01_1" andDelegate:nil];
-    [_rateBar displayRating:[jsonDic[@"star"] floatValue]];
+    [_rateBar setImageDeselected:@"star01_1" halfSelected:nil fullSelected:@"star01" andDelegate:nil];
+    float count = jsonDic[@"star"]?[jsonDic[@"star"] floatValue]:1.0;
+    [_rateBar displayRating:count];
 }
 
 - (void)didReceiveMemoryWarning {

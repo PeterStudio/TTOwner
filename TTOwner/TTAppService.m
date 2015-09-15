@@ -185,5 +185,33 @@ static dispatch_once_t predicate;
 }
 
 
+- (void)request_rechargeRecord_Http_userId:(NSString *)_userId
+                                        page:(NSString *)_page
+                                         num:(NSString *)_num
+                                   queryTime:(NSString *)_queryTime
+                                     success:(void (^)(id responseObject))success
+                                     failure:(void (^)(NSError *error))failure{
+    NSDictionary * dic = [[NSUserDefaults standardUserDefaults] objectForKey:@"USERDATA"];
+    NSDictionary * params = nil;
+    if ([@"FIRST" isEqualToString:_queryTime]) {
+        params = @{@"userId":dic[@"userId"],@"page":_page,@"num":_num};
+    }else{
+        params = @{@"userId":dic[@"userId"],@"page":_page,@"num":_num,@"queryTime":_queryTime};
+    }
+    
+    NSLog(@"params = %@",params);
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer =  [AFHTTPRequestSerializer serializer];
+    [manager POST:SERVICE(@"rechargeRecord.do") parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
 
 @end

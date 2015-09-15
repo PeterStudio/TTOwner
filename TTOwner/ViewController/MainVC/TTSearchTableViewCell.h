@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface TTSearchTableViewCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UILabel *indxLab;
+@property (strong, nonatomic) IBOutlet UILabel *addresLab;
+@property (strong, nonatomic) IBOutlet UILabel *nameLab;
+@property (strong, nonatomic) IBOutlet UILabel *timeLab;
+@property (strong, nonatomic) IBOutlet UIButton *stateBtn;
 
 @end

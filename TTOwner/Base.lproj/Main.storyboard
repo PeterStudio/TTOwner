@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -199,7 +199,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rFR-da-NSE" kind="push" id="nih-Lj-HJ3"/>
+                                    <segue destination="bAz-6r-7UE" kind="push" id="C36-MZ-MNO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sl2-fy-kid">
@@ -208,7 +208,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bAz-6r-7UE" kind="push" id="HWA-tQ-HBv"/>
+                                    <segue destination="rFR-da-NSE" kind="push" id="PC0-o9-r2K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5x2-d9-UGS">
@@ -305,11 +305,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vf7-Hr-1Vb" customClass="RatingBar">
-                                <rect key="frame" x="130" y="194" width="60" height="15"/>
+                                <rect key="frame" x="110" y="188" width="100" height="15"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="CWM-7Q-tYt"/>
-                                    <constraint firstAttribute="width" constant="60" id="V1C-qi-Omq"/>
+                                    <constraint firstAttribute="width" constant="100" id="V1C-qi-Omq"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -320,7 +320,7 @@
                             <constraint firstItem="2EU-Up-PzR" firstAttribute="centerX" secondItem="1Hi-mx-Zdn" secondAttribute="centerX" id="2Of-sw-1w4"/>
                             <constraint firstItem="Fvq-KM-A6D" firstAttribute="leading" secondItem="fr6-jS-Vxc" secondAttribute="leading" id="2jJ-Ks-zKi"/>
                             <constraint firstItem="2EU-Up-PzR" firstAttribute="top" secondItem="yoT-eI-ndt" secondAttribute="top" id="4Lb-KG-5l0"/>
-                            <constraint firstItem="vf7-Hr-1Vb" firstAttribute="top" secondItem="9dB-ML-Dtb" secondAttribute="bottom" constant="8" id="4OS-Sm-8Hp"/>
+                            <constraint firstItem="vf7-Hr-1Vb" firstAttribute="top" secondItem="9dB-ML-Dtb" secondAttribute="bottom" constant="2" id="4OS-Sm-8Hp"/>
                             <constraint firstItem="s1U-1z-GRd" firstAttribute="top" secondItem="xAi-uL-TQ1" secondAttribute="top" id="53Q-qE-pgg"/>
                             <constraint firstItem="jJP-8x-8Hc" firstAttribute="centerX" secondItem="YWY-yq-Hb7" secondAttribute="centerX" id="5Lw-b8-HQy"/>
                             <constraint firstItem="s1U-1z-GRd" firstAttribute="top" secondItem="PDa-sG-4bg" secondAttribute="top" id="6C3-M7-76m"/>
@@ -390,7 +390,7 @@
             </objects>
             <point key="canvasLocation" x="1459" y="-73"/>
         </scene>
-        <!--预约查询-->
+        <!--我的工地-->
         <scene sceneID="r1O-Dt-rgy">
             <objects>
                 <tableViewController id="rFR-da-NSE" customClass="TTSearchViewController" sceneMemberID="viewController">
@@ -540,7 +540,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="施工时间：2015-08-09" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgr-PX-yHt">
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="施工时间：2015-08-09" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgr-PX-yHt">
                                             <rect key="frame" x="193" y="87" width="105" height="12"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <nil key="highlightedColor"/>
@@ -579,6 +579,13 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="addresLab" destination="FIp-g5-zVW" id="ZBc-V9-1Sq"/>
+                                    <outlet property="indxLab" destination="Pea-9R-4Wb" id="b8K-ga-yWl"/>
+                                    <outlet property="nameLab" destination="XGD-dl-CMU" id="mL8-Yd-Tb4"/>
+                                    <outlet property="stateBtn" destination="9uS-UZ-hNn" id="RJU-z4-J4O"/>
+                                    <outlet property="timeLab" destination="bgr-PX-yHt" id="keE-wZ-ynF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -586,7 +593,7 @@
                             <outlet property="delegate" destination="rFR-da-NSE" id="W6o-d1-cOU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="预约查询" id="wBA-es-Leq"/>
+                    <navigationItem key="navigationItem" title="我的工地" id="wBA-es-Leq"/>
                     <connections>
                         <outlet property="qianyueLab" destination="yLS-HH-mmw" id="8qZ-gr-zVI"/>
                         <outlet property="qiaotanLab" destination="4Yn-cb-Kow" id="u8C-PV-L52"/>
@@ -597,7 +604,7 @@
             </objects>
             <point key="canvasLocation" x="2109" y="208"/>
         </scene>
-        <!--我的工地-->
+        <!--预约查询-->
         <scene sceneID="CIM-nd-TbJ">
             <objects>
                 <tableViewController id="bAz-6r-7UE" customClass="TTWorkSitesViewController" sceneMemberID="viewController">
@@ -786,7 +793,7 @@
                             <outlet property="delegate" destination="bAz-6r-7UE" id="cGw-rE-HMD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="我的工地" id="kqq-cA-UTJ"/>
+                    <navigationItem key="navigationItem" title="预约查询" id="kqq-cA-UTJ"/>
                     <connections>
                         <outlet property="feeLab" destination="wk3-CW-ifE" id="huI-qU-rQO"/>
                         <outlet property="moneyLab" destination="Jf7-iC-1sC" id="dg2-ti-eae"/>
@@ -1428,19 +1435,19 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付宝支付" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evb-pm-ddu">
                                         <rect key="frame" x="110" y="15" width="80" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信支付" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRo-N6-QB3">
                                         <rect key="frame" x="110" y="65" width="64" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="银联支付" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32I-0f-HMp">
                                         <rect key="frame" x="110" y="115" width="64" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRG-IR-Nk8">
@@ -1760,11 +1767,11 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OAf-KU-6VK" customClass="RatingBar">
-                                    <rect key="frame" x="130" y="131" width="60" height="15"/>
+                                    <rect key="frame" x="110" y="124" width="100" height="15"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="15" id="PUd-MZ-FFI"/>
-                                        <constraint firstAttribute="width" constant="60" id="WCL-a8-AOT"/>
+                                        <constraint firstAttribute="width" constant="100" id="WCL-a8-AOT"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -1779,7 +1786,7 @@
                                 <constraint firstItem="BVO-Mw-jZ9" firstAttribute="top" secondItem="dK2-0I-zN1" secondAttribute="top" id="QLP-58-q0a"/>
                                 <constraint firstItem="xEC-n8-IpV" firstAttribute="centerX" secondItem="mQY-xd-bJU" secondAttribute="centerX" id="ZOS-PT-V6B"/>
                                 <constraint firstAttribute="centerX" secondItem="4MV-P1-tcM" secondAttribute="centerX" id="lXJ-cL-8jH"/>
-                                <constraint firstItem="OAf-KU-6VK" firstAttribute="top" secondItem="xEC-n8-IpV" secondAttribute="bottom" constant="9" id="m7k-bk-tzr"/>
+                                <constraint firstItem="OAf-KU-6VK" firstAttribute="top" secondItem="xEC-n8-IpV" secondAttribute="bottom" constant="2" id="m7k-bk-tzr"/>
                                 <constraint firstItem="xEC-n8-IpV" firstAttribute="top" secondItem="mQY-xd-bJU" secondAttribute="bottom" constant="5" id="urq-ll-4Ao"/>
                                 <constraint firstItem="4MV-P1-tcM" firstAttribute="centerX" secondItem="mQY-xd-bJU" secondAttribute="centerX" id="w5k-mi-OEg"/>
                             </constraints>
@@ -1895,6 +1902,7 @@
                         <outlet property="countLab" destination="xEC-n8-IpV" id="DB4-b3-Lrb"/>
                         <outlet property="headIV" destination="4MV-P1-tcM" id="zd8-Wa-pxm"/>
                         <outlet property="nameLab" destination="mQY-xd-bJU" id="ZCq-ss-wfq"/>
+                        <outlet property="phoneTF" destination="cFo-Qm-iUB" id="hxL-TI-Zvq"/>
                         <outlet property="pswTF1" destination="eGr-1d-YuL" id="MrQ-Wo-Fg7"/>
                         <outlet property="pswTF2" destination="nWf-k9-ihh" id="TkD-yH-ojQ"/>
                         <outlet property="rateBar" destination="OAf-KU-6VK" id="ASM-U5-zos"/>

@@ -8,12 +8,20 @@
 
 #import "TTPayHitoryViewController.h"
 #import "TTPayHistoryTableViewCell.h"
+#import "MJRefresh.h"
 
 
 @interface TTPayHitoryViewController (){
     NSDictionary * jsonDic;
+    NSString * queryTime;
+    NSString * money;
 }
 @property (weak, nonatomic) IBOutlet UILabel *accountLab;
+
+@property (strong, nonatomic) NSMutableArray * dataSourceArray;
+@property (assign, nonatomic) int page;
+@property (assign, nonatomic) BOOL      isPulling;
+@property (assign, nonatomic) BOOL      hasMore;
 
 @end
 
@@ -24,34 +32,98 @@
 
     jsonDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"USERDATA"];
     
-    
-//    [SVProgressHUD showWithStatus:@"加载中" maskType:SVProgressHUDMaskTypeClear];
+    _dataSourceArray = [[NSMutableArray alloc] init];
+    queryTime = @"FIRST";
+    _isPulling = YES;
+    _page = 1;
+    _hasMore = YES;
+    __weak UITableView * weaktb = self.tableView;
+    [weaktb addHeaderWithCallback:^{
+        _isPulling = YES;
+        queryTime = @"FIRST";
+        _page = 1;
+        _hasMore = YES;
+        [self requestDataWithPage:_page];
+        if (weaktb.footerHidden) {
+            [weaktb setFooterHidden:NO];
+        }
+    }];
+    [weaktb addFooterWithCallback:^{
+        _isPulling = NO;
+        if (_hasMore) {
+            [self requestDataWithPage:++_page];
+        }
+    }];
+    [self requestDataWithPage:_page];
 //    
-//    [[TTAppService sharedManager] request_]
-//    
-//    [[TTAppService sharedManager] request_Login_Http_username:self.usernameTF.text pas:self.passwordTF.text system:@"1" version:curVersion imei:imeiStr lat:@"" lng:@"" success:^(id responseObject) {
-//        NSDictionary * jsonDic = responseObject;
-//        if ([@"000000" isEqualToString:jsonDic[@"retcode"]]) {
-//            [SVProgressHUD showSuccessWithStatus:jsonDic[@"retinfo"]];
-//            [[NSUserDefaults standardUserDefaults] setObject:jsonDic[@"doc"] forKey:@"USERDATA"];
-//            [[NSUserDefaults standardUserDefaults] synchronize];
-//            [self performSegueWithIdentifier:@"LoginSuccessID" sender:nil];
-//        }else{
-//            [SVProgressHUD showErrorWithStatus:jsonDic[@"retinfo"]];
-//        }
-//    } failure:^(NSError *error) {
-//        [SVProgressHUD showErrorWithStatus:@"请求失败，请稍后再试"];
-//    }];
-//    
+}
+
+- (void)requestDataWithPage:(int)page{
+    [SVProgressHUD showWithStatus:@"加载中" maskType:SVProgressHUDMaskTypeClear];
+    [[TTAppService sharedManager] request_rechargeRecord_Http_userId:@"userId" page:[NSString stringWithFormat:@"%d",page] num:@"10" queryTime:queryTime success:^(id responseObject) {
+        NSDictionary * dic = responseObject;
+        if ([@"000000" isEqualToString:dic[@"retcode"]]) {
+            if (_isPulling) {
+                [_dataSourceArray removeAllObjects];
+                [self.tableView headerEndRefreshing];
+            }else{
+                [self.tableView footerEndRefreshing];
+            }
+            NSDictionary * dic1 = dic[@"doc"];
+            NSArray * arr = dic1[@"record"];
+            NSNumber * number = dic1[@"balance"];
+            _accountLab.text = [number stringValue];
+            if (arr.count < 10) {
+                _hasMore = NO;
+                [self.tableView setFooterHidden:YES];
+                [self.tableView footerEndRefreshing];
+            }
+            [_dataSourceArray addObjectsFromArray:arr];
+            [self.tableView reloadData];
+            queryTime = dic[@"queryTime"];
+            [SVProgressHUD dismiss];
+        }else{
+            if ([_dataSourceArray count]) {
+                [SVProgressHUD showErrorWithStatus:dic[@"retinfo"]];
+            }else{
+                [SVProgressHUD dismiss];
+            }
+            [self endRefreshing];
+        }
+    } failure:^(NSError *error) {
+        if ([_dataSourceArray count]) {
+            [SVProgressHUD showErrorWithStatus:@"请求失败，请稍后再试"];
+        }else{
+            [SVProgressHUD dismiss];
+        }
+        [self endRefreshing];
+    }];
+}
+
+/**
+ *  停止数据刷新UI
+ */
+- (void)endRefreshing{
+    if (_isPulling) {
+        [self.tableView headerEndRefreshing];
+    }else{
+        [self.tableView footerEndRefreshing];
+    }
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return _dataSourceArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     TTPayHistoryTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"PayHistoryIdentifier"];
+    NSDictionary * dic = [_dataSourceArray objectAtIndex:indexPath.row];
+    cell.moneyLab.text = dic[@"num"];
+    NSString * str = dic[@"time"];
+    cell.timeLab.text = str;
+    cell.statusLab.text = dic[@"state"];
+    
     return cell;
 }
 
