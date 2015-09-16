@@ -10,10 +10,11 @@
 #import "Macros.h"
 
 #import "TTAppService.h"
+#import "WelComeViewController.h"
 
 #import <AdSupport/AdSupport.h>
 
-@interface AppDelegate ()<UIAlertViewDelegate>
+@interface AppDelegate ()<UIAlertViewDelegate,WelComeViewControllerDelegate>
 
 @end
 
@@ -25,8 +26,30 @@
     self.window.backgroundColor = [UIColor whiteColor];
 //    TTLoginViewViewController * loginVC = [[TTLoginViewViewController alloc] init];
 //
+    
+    //控制欢迎页
+    if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"isVersionUpdate"] integerValue] < 1)
+    {
+        //首次安装，显示引导页面
+        WelComeViewController * vc = [[WelComeViewController alloc] init];
+        vc.delegate = self;
+        self.window.rootViewController = vc;
+        [self.window makeKeyAndVisible];
+    }
+    else{
+        [self showRoot];
+    }
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadRootView) name:@"ROOTVIEWCONTROLLER" object:nil];
     
+    
+    
+//    [self updateVersion];
+    [self test];
+    return YES;
+}
+
+- (void)showRoot{
     UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     NSDictionary * jsonDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"USERDATA"];
     UINavigationController * nav;
@@ -37,10 +60,6 @@
     }
     [self.window setRootViewController:nav];
     [self.window makeKeyAndVisible];
-    
-//    [self updateVersion];
-    [self test];
-    return YES;
 }
 
 - (void)reloadRootView{
@@ -110,5 +129,12 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark WelcomeViewControllerDelegate
+- (void)enterButtonPressed
+{
+    [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:@"isVersionUpdate"];
+    [self.window.rootViewController removeFromParentViewController];
+    [self showRoot];
+}
 
 @end

@@ -45,6 +45,8 @@
 		0BBDEF5F1BA8533F00184D71 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBDEF551BA8533F00184D71 /* UIScrollView+MJExtension.m */; };
 		0BBDEF601BA8533F00184D71 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBDEF571BA8533F00184D71 /* UIScrollView+MJRefresh.m */; };
 		0BBDEF611BA8533F00184D71 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBDEF591BA8533F00184D71 /* UIView+MJExtension.m */; };
+		0BF2A4B61BA9C04700E3A7D9 /* WelComeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2A4B41BA9C04700E3A7D9 /* WelComeViewController.m */; };
+		0BF2A4B71BA9C04700E3A7D9 /* WelComeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF2A4B51BA9C04700E3A7D9 /* WelComeViewController.xib */; };
 		5A5CAD3EDC8965EACB51285A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 724BD81A907B0CD794E779A2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +129,9 @@
 		0BBDEF571BA8533F00184D71 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		0BBDEF581BA8533F00184D71 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		0BBDEF591BA8533F00184D71 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		0BF2A4B31BA9C04700E3A7D9 /* WelComeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelComeViewController.h; sourceTree = "<group>"; };
+		0BF2A4B41BA9C04700E3A7D9 /* WelComeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelComeViewController.m; sourceTree = "<group>"; };
+		0BF2A4B51BA9C04700E3A7D9 /* WelComeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelComeViewController.xib; sourceTree = "<group>"; };
 		30B5665F21D8EFB5F6880C6D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5A44EB03FD981B2A5AF5BF50 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		724BD81A907B0CD794E779A2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,6 +233,9 @@
 				0B14086D1BA06CE200BA92AC /* TTAppService.m */,
 				0B1408751BA085DA00BA92AC /* RatingBar.h */,
 				0B1408761BA085DA00BA92AC /* RatingBar.m */,
+				0BF2A4B31BA9C04700E3A7D9 /* WelComeViewController.h */,
+				0BF2A4B41BA9C04700E3A7D9 /* WelComeViewController.m */,
+				0BF2A4B51BA9C04700E3A7D9 /* WelComeViewController.xib */,
 				09C6646E1B5F657B003BE91F /* Main.storyboard */,
 				09C664711B5F657B003BE91F /* Images.xcassets */,
 				09C664731B5F657B003BE91F /* LaunchScreen.xib */,
@@ -422,6 +430,7 @@
 				09C664751B5F657B003BE91F /* LaunchScreen.xib in Resources */,
 				0BBDEF5A1BA8533F00184D71 /* MJRefresh.bundle in Resources */,
 				09C664721B5F657B003BE91F /* Images.xcassets in Resources */,
+				0BF2A4B71BA9C04700E3A7D9 /* WelComeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +479,7 @@
 				09C6646D1B5F657B003BE91F /* ViewController.m in Sources */,
 				09BA5FD11BA196E800107ECA /* TTPayViewController.mm in Sources */,
 				09C781CE1B5F839D0050B73F /* TTLoginViewModel.m in Sources */,
+				0BF2A4B61BA9C04700E3A7D9 /* WelComeViewController.m in Sources */,
 				09769FF41BA1A8E5005108CE /* UIButton+LangExt.m in Sources */,
 				0BBDEF5E1BA8533F00184D71 /* MJRefreshHeaderView.m in Sources */,
 				0BBDEF5B1BA8533F00184D71 /* MJRefreshBaseView.m in Sources */,
@@ -540,8 +550,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wen Du (6WWFTZ4U92)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wen Du (6WWFTZ4U92)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -563,7 +573,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "44a49e7c-c732-46b8-84f9-c9f1c0e2b5e7";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -585,8 +595,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wen Du (6WWFTZ4U92)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wen Du (6WWFTZ4U92)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -601,7 +611,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "44a49e7c-c732-46b8-84f9-c9f1c0e2b5e7";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -613,8 +623,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wen Du (6WWFTZ4U92)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wen Du (6WWFTZ4U92)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
 				INFOPLIST_FILE = TTOwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -622,7 +632,7 @@
 					"$(PROJECT_DIR)/TTOwner/Vender/UPPayPlugin",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "44a49e7c-c732-46b8-84f9-c9f1c0e2b5e7";
 			};
 			name = Debug;
 		};
@@ -632,8 +642,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wen Du (6WWFTZ4U92)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wen Du (6WWFTZ4U92)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
 				INFOPLIST_FILE = TTOwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -641,7 +651,7 @@
 					"$(PROJECT_DIR)/TTOwner/Vender/UPPayPlugin",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "44a49e7c-c732-46b8-84f9-c9f1c0e2b5e7";
 			};
 			name = Release;
 		};
