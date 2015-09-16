@@ -7,7 +7,9 @@
 //
 
 #import "TTBaseViewController.h"
+#import "UPPayPluginDelegate.h"
 
-@interface TTPayViewController : TTBaseViewController
+
+@interface TTPayViewController : TTBaseViewController<UPPayPluginDelegate>
 
 @end

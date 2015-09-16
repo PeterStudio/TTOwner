@@ -40,7 +40,7 @@
     float count = jsonDic[@"star"]?[jsonDic[@"star"] floatValue]:1.0;
     [_rateBar displayRating:count];
     
-    _phoneTF.placeholder = [[NSUserDefaults standardUserDefaults] objectForKey:@"name"];
+    _phoneTF.placeholder = jsonDic[@"tel"];
     
 }
 

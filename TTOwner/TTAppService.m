@@ -213,6 +213,24 @@ static dispatch_once_t predicate;
     }];
 }
 
+
+- (void)request_payMoney_Http_userId:(NSString *)_userId money:(NSString *)_money type:(NSString *)_type success:(void (^)(id))success failure:(void (^)(NSError *))failure{
+    NSDictionary * dic = [[NSUserDefaults standardUserDefaults] objectForKey:@"USERDATA"];
+    NSDictionary * params = @{@"userId":dic[@"userId"],@"money":_money,@"type":_type};
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer =  [AFHTTPRequestSerializer serializer];
+    [manager POST:SERVICE(@"payMoney.do") parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
+
 - (void)request_PRE_Http_success:(void (^)(id))success failure:(void (^)(NSError *))failure{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer =  [AFHTTPRequestSerializer serializer];

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -1279,7 +1279,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="own-E6-gso">
-                                <rect key="frame" x="0.0" y="165" width="320" height="88"/>
+                                <rect key="frame" x="0.0" y="155" width="320" height="88"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_grey_foot_40x1" translatesAutoresizingMaskIntoConstraints="NO" id="mpL-0b-f16">
                                         <rect key="frame" x="0.0" y="87" width="320" height="1"/>
@@ -1290,7 +1290,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_grey_mid_40x1" translatesAutoresizingMaskIntoConstraints="NO" id="hFR-Es-Rgc">
                                         <rect key="frame" x="0.0" y="44" width="320" height="1"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tk8-oH-v3R">
+                                    <button opaque="NO" tag="1000" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tk8-oH-v3R">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -1308,7 +1308,7 @@
                                             <action selector="moneyBtnAction:" destination="WMf-xy-rqp" eventType="touchUpInside" id="5N7-yI-ibc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEF-Kf-IfD">
+                                    <button opaque="NO" tag="2000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEF-Kf-IfD">
                                         <rect key="frame" x="81" y="0.0" width="80" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="2000元">
@@ -1319,7 +1319,7 @@
                                             <action selector="moneyBtnAction:" destination="WMf-xy-rqp" eventType="touchUpInside" id="wfe-lY-Wmx"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcY-vy-KN2">
+                                    <button opaque="NO" tag="3000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcY-vy-KN2">
                                         <rect key="frame" x="160" y="0.0" width="80" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="3000元">
@@ -1330,7 +1330,7 @@
                                             <action selector="moneyBtnAction:" destination="WMf-xy-rqp" eventType="touchUpInside" id="uie-ik-wTG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJz-YO-v1A">
+                                    <button opaque="NO" tag="5000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJz-YO-v1A">
                                         <rect key="frame" x="240" y="0.0" width="80" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="5000元">
@@ -1409,7 +1409,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQJ-Lu-yhY">
-                                <rect key="frame" x="0.0" y="293" width="320" height="150"/>
+                                <rect key="frame" x="0.0" y="273" width="320" height="150"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_grey_foot_40x1" translatesAutoresizingMaskIntoConstraints="NO" id="Ufs-2h-f8F">
                                         <rect key="frame" x="0.0" y="149" width="320" height="1"/>
@@ -1529,19 +1529,19 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充值金额" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Cc-5y-Yzt">
-                                <rect key="frame" x="15" y="145" width="48" height="15"/>
+                                <rect key="frame" x="15" y="135" width="48" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付方式" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlc-ab-mve">
-                                <rect key="frame" x="15" y="273" width="48" height="15"/>
+                                <rect key="frame" x="15" y="253" width="48" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8f-5a-JCu">
-                                <rect key="frame" x="15" y="458" width="290" height="40"/>
+                                <rect key="frame" x="15" y="438" width="290" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ERU-WI-tNK"/>
@@ -1559,7 +1559,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CQJ-Lu-yhY" firstAttribute="top" secondItem="own-E6-gso" secondAttribute="bottom" constant="40" id="1F6-FE-OzR"/>
+                            <constraint firstItem="CQJ-Lu-yhY" firstAttribute="top" secondItem="own-E6-gso" secondAttribute="bottom" constant="30" id="1F6-FE-OzR"/>
                             <constraint firstItem="Uo5-Mm-pra" firstAttribute="leading" secondItem="vW2-L0-cus" secondAttribute="leading" id="2ZT-vG-mzt"/>
                             <constraint firstItem="CQJ-Lu-yhY" firstAttribute="top" secondItem="zlc-ab-mve" secondAttribute="bottom" constant="5" id="4RI-wP-5Lw"/>
                             <constraint firstAttribute="trailing" secondItem="Uo5-Mm-pra" secondAttribute="trailing" id="5wl-OK-RPZ"/>
@@ -1572,7 +1572,7 @@
                             <constraint firstItem="m8f-5a-JCu" firstAttribute="top" secondItem="CQJ-Lu-yhY" secondAttribute="bottom" constant="15" id="e5P-py-8EH"/>
                             <constraint firstAttribute="trailing" secondItem="own-E6-gso" secondAttribute="trailing" id="ePD-fh-Jp3"/>
                             <constraint firstItem="own-E6-gso" firstAttribute="leading" secondItem="vW2-L0-cus" secondAttribute="leading" id="f3X-FN-Ktf"/>
-                            <constraint firstItem="own-E6-gso" firstAttribute="top" secondItem="Uo5-Mm-pra" secondAttribute="bottom" constant="40" id="fEN-W6-2a1"/>
+                            <constraint firstItem="own-E6-gso" firstAttribute="top" secondItem="Uo5-Mm-pra" secondAttribute="bottom" constant="30" id="fEN-W6-2a1"/>
                             <constraint firstItem="CQJ-Lu-yhY" firstAttribute="leading" secondItem="vW2-L0-cus" secondAttribute="leading" id="l3K-qW-Dh1"/>
                             <constraint firstAttribute="trailing" secondItem="m8f-5a-JCu" secondAttribute="trailing" constant="15" id="xNi-Lz-nKB"/>
                         </constraints>

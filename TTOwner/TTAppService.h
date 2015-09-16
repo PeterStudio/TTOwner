@@ -68,5 +68,11 @@
 - (void)request_PRE_Http_success:(void (^)(id responseObject))success
                             failure:(void (^)(NSError *error))failure;
 
+- (void)request_payMoney_Http_userId:(NSString *)_userId
+                                money:(NSString *)_money
+                                 type:(NSString *)_type
+                             success:(void (^)(id responseObject))success
+                             failure:(void (^)(NSError *error))failure;
+
 
 @end
