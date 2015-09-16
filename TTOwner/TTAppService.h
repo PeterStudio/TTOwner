@@ -65,4 +65,8 @@
                                      failure:(void (^)(NSError *error))failure;
 
 
+- (void)request_PRE_Http_success:(void (^)(id responseObject))success
+                            failure:(void (^)(NSError *error))failure;
+
+
 @end
