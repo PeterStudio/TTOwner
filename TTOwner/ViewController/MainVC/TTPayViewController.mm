@@ -24,7 +24,7 @@
 #define kResult           @"支付结果：%@"
 
 
-#define kMode_Development             @"01"  // 00正式环境 01开发环境
+#define kMode_Development             @"00"  // 00正式环境 01开发环境
 
 @interface TTPayViewController (){
     NSDictionary * jsonDic;
@@ -34,6 +34,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *phoneLab;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *moneyBtnArr;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *payBtnArr;
+@property (weak, nonatomic) IBOutlet UITextField *moneyTF;
 
 @end
 
@@ -82,15 +83,39 @@
     }
     switch (temp.tag) {
         case 0: // 支付宝
-            
+        {
+            if (![self checkMoneySuccess]) {
+                [SVProgressHUD showErrorWithStatus:@"最低充值金额1000元"];
+                return;
+            }else{
+                [SVProgressHUD showErrorWithStatus:@"亲，暂时还未开通支付宝支付哦～"];
+            }
+        }
             break;
         case 1: //微信
-            
+        {
+            if (![self checkMoneySuccess]) {
+                [SVProgressHUD showErrorWithStatus:@"最低充值金额1000元"];
+                return;
+            }else{
+                [SVProgressHUD showErrorWithStatus:@"亲，暂时还未开通微信支付哦～"];
+            }
+        }
             break;
         case 2: // 银联
         {
+            if (![self checkMoneySuccess]) {
+                [SVProgressHUD showErrorWithStatus:@"最低充值金额1000元"];
+                return;
+            }
+            
+            NSString * money = [NSString stringWithFormat:@"%ld",temp1.tag];
+            if ([self.moneyTF.text integerValue] > 0) {
+                money = self.moneyTF.text;
+            }
+            
             [SVProgressHUD showWithStatus:kWaiting maskType:SVProgressHUDMaskTypeClear];
-            [[TTAppService sharedManager] request_payMoney_Http_userId:@"" money:[NSString stringWithFormat:@"%ld",temp1.tag] type:@"3" success:^(id responseObject) {
+            [[TTAppService sharedManager] request_payMoney_Http_userId:@"" money:money type:@"3" success:^(id responseObject) {
                 NSDictionary * dic = responseObject;
                 if ([@"000000" isEqualToString:dic[@"retcode"]]) {
                     [SVProgressHUD dismiss];
@@ -110,6 +135,17 @@
     }
 }
 
+- (BOOL)checkMoneySuccess{
+    if (self.moneyTF.text.length < 4 && self.moneyTF.text.length > 0 && [self.moneyTF.text integerValue] > 0) {
+        return NO;
+    }else{
+        return YES;
+    }
+}
+
+- (IBAction)tapTouch:(id)sender {
+    [self.view endEditing:YES];
+}
 
 
 #pragma mark - Alert
