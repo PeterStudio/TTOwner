@@ -44,8 +44,30 @@
     
     
     
+    //定位服务管理对象初始化
+    startIndex = 0;
+    _locationManager = [[CLLocationManager alloc] init];
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8) {
+        //获取授权认证
+        [_locationManager requestAlwaysAuthorization];
+        [_locationManager requestWhenInUseAuthorization];
+    }
+    _locationManager.delegate = self;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    _locationManager.distanceFilter = 100.f; // 设定最少移动1000米才能刷新
+    [_locationManager requestAlwaysAuthorization];
+    [_locationManager startUpdatingLocation]; // 开始定位
+    
+    
+    
+//    [[TTAppService sharedManager] request_PRE_Info_Http_success:^(id responseObject) {
+//        NSLog(@"res===%@",responseObject);
+//    } failure:^(NSError *error) {
+//        
+//    }];
+    
 //    [self updateVersion];
-    [self test];
+//    [self test];
     return YES;
 }
 
@@ -95,7 +117,6 @@
     }];
 }
 
-
 - (void)test{
     [[TTAppService sharedManager] request_PRE_Http_success:^(id responseObject) {
         NSDictionary * dic = responseObject;
@@ -128,6 +149,31 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark - CLLocationManagerDelegate
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    CLLocation * curLocation1 = [locations lastObject];
+    _currLocation = [[CLLocation alloc] initWithLatitude:curLocation1.coordinate.latitude - 0.00215 longitude:curLocation1.coordinate.longitude + 0.00510];
+    ++startIndex;
+    if (startIndex == 1) {
+        [_locationManager stopUpdatingLocation];
+    }
+    
+    NSNumber *latNumber = [NSNumber numberWithDouble:_currLocation.coordinate.latitude];
+    NSString *lat = [latNumber stringValue];
+    NSNumber *lngNumber = [NSNumber numberWithDouble:_currLocation.coordinate.longitude];
+    NSString *lng = [lngNumber stringValue];
+    [[NSUserDefaults standardUserDefaults] setObject:lat forKey:@"Userlatitude"];
+    [[NSUserDefaults standardUserDefaults] setObject:lng forKey:@"Userlongitude"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    NSLog(@"当前位置定位失败！");
+}
+
+
 
 #pragma mark WelcomeViewControllerDelegate
 - (void)enterButtonPressed

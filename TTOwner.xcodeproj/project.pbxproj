@@ -573,7 +573,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "44a49e7c-c732-46b8-84f9-c9f1c0e2b5e7";
+				PROVISIONING_PROFILE = "1bb9884a-fd29-4c07-8dc5-b1ddbbbc59ca";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -611,7 +611,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "44a49e7c-c732-46b8-84f9-c9f1c0e2b5e7";
+				PROVISIONING_PROFILE = "1bb9884a-fd29-4c07-8dc5-b1ddbbbc59ca";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -624,7 +624,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TTOwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -632,7 +632,7 @@
 					"$(PROJECT_DIR)/TTOwner/Vender/UPPayPlugin",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "44a49e7c-c732-46b8-84f9-c9f1c0e2b5e7";
+				PROVISIONING_PROFILE = "1bb9884a-fd29-4c07-8dc5-b1ddbbbc59ca";
 			};
 			name = Debug;
 		};
@@ -643,7 +643,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TTOwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -651,7 +651,7 @@
 					"$(PROJECT_DIR)/TTOwner/Vender/UPPayPlugin",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "44a49e7c-c732-46b8-84f9-c9f1c0e2b5e7";
+				PROVISIONING_PROFILE = "1bb9884a-fd29-4c07-8dc5-b1ddbbbc59ca";
 			};
 			name = Release;
 		};

@@ -12,7 +12,7 @@
 static TTAppService * shareAppServiceManagerInstance = nil;
 static dispatch_once_t predicate;
 
-#define SERVICE(x) [NSString stringWithFormat:@"http://118.26.129.11:8080/platform/decorateForman/%@",x]
+#define SERVICE(x) [NSString stringWithFormat:@"http://www.dingdinggongzhang.com/platform/decorateForman/%@",x]
 
 @implementation TTAppService
 + (TTAppService *)sharedManager{
@@ -39,8 +39,8 @@ static dispatch_once_t predicate;
                               ,@"version":_version
                               ,@"imei":_imei
                               ,@"type":@"0"
-                              ,@"lat":_lat
-                              ,@"lng":_lng};
+                              ,@"lat":_lat?_lat:@""
+                              ,@"lng":_lng?_lng:@""};
     NSLog(@"params=%@",params);
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer =  [AFHTTPRequestSerializer serializer];
@@ -196,7 +196,7 @@ static dispatch_once_t predicate;
     if ([@"FIRST" isEqualToString:_queryTime]) {
         params = @{@"userId":dic[@"userId"],@"page":_page,@"num":_num};
     }else{
-        params = @{@"userId":dic[@"userId"],@"page":_page,@"num":_num,@"queryTime":_queryTime};
+        params = @{@"userId":dic[@"userId"],@"page":_page,@"num":_num,@"queryTime":_queryTime?_queryTime:@""};
     }
     
     NSLog(@"params = %@",params);
@@ -229,6 +229,25 @@ static dispatch_once_t predicate;
         }
     }];
 }
+
+- (void)request_PRE_Info_Http_success:(void (^)(id responseObject))success
+                              failure:(void (^)(NSError *error))failure{
+//    NSDictionary * params = @{@"user_key":@"",@"app_key":@"",@"package_key":@""};
+    NSDictionary * params = @{@"user_key":@"2e54caed7b65f456896d0ae3c26c4f00"};
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer =  [AFHTTPRequestSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];//设置相应内容类型
+    [manager POST:@"http://pre.im/api/v1/app/myapps" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
 
 
 - (void)request_PRE_Http_success:(void (^)(id))success failure:(void (^)(NSError *))failure{

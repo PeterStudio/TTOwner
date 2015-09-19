@@ -8,14 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-
+#import <CoreLocation/CLLocationManagerDelegate.h>
+#import <AddressBook/AddressBook.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate,CLLocationManagerDelegate>{
-
+    int startIndex;
 }
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property(nonatomic, strong) CLLocationManager *locationManager;
+@property(nonatomic, strong) CLLocation * currLocation;
 
 @end
 
