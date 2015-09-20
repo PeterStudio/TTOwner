@@ -8,7 +8,7 @@
 
 #import "TTServiceAgreementViewController.h"
 
-@interface TTServiceAgreementViewController ()
+@interface TTServiceAgreementViewController ()<UIWebViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIWebView *serviceWebView;
 
@@ -18,9 +18,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSURL *url =[NSURL URLWithString:@"http://www.baidu.com"];
-    NSURLRequest *request =[NSURLRequest requestWithURL:url];
-    [_serviceWebView loadRequest:request];
+//    NSURL *url =[NSURL URLWithString:@"http://www.baidu.com"];
+//    NSURLRequest *request =[NSURLRequest requestWithURL:url];
+//    [_serviceWebView loadRequest:request];
+    [self loadDOCX];
+}
+
+#pragma mark 加载docx文件
+- (void)loadDOCX
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"about.txt" ofType:nil];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    [_serviceWebView loadData:data MIMEType:@"text/plain" textEncodingName:@"UTF-8" baseURL:url];
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView{
+    [SVProgressHUD showWithStatus:@"加载中"];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    [SVProgressHUD dismiss];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    [SVProgressHUD dismiss];
 }
 
 - (void)didReceiveMemoryWarning {

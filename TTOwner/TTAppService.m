@@ -38,9 +38,8 @@ static dispatch_once_t predicate;
                               ,@"system":_system
                               ,@"version":_version
                               ,@"imei":_imei
-                              ,@"type":@"0"
-                              ,@"lat":_lat?_lat:@""
-                              ,@"lng":_lng?_lng:@""};
+                              ,@"lat":_lat?_lat:@"39.905206"
+                              ,@"lng":_lng?_lng:@"116.390356"};
     NSLog(@"params=%@",params);
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer =  [AFHTTPRequestSerializer serializer];

@@ -37,6 +37,7 @@
 		0B1408911BA0F02600BA92AC /* TTInvitationFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1408901BA0F02600BA92AC /* TTInvitationFriendsViewController.m */; };
 		0B2F37D71B9F3626003EC1CB /* TTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F37D61B9F3626003EC1CB /* TTBaseTableViewController.m */; };
 		0B2F37DA1B9F383D003EC1CB /* TTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F37D91B9F383D003EC1CB /* TTLoginViewController.m */; };
+		0B3797471BAEECBE00D2BD64 /* about.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B3797461BAEECBE00D2BD64 /* about.txt */; settings = {ASSET_TAGS = (); }; };
 		0BBDEF5A1BA8533F00184D71 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0BBDEF4A1BA8533F00184D71 /* MJRefresh.bundle */; };
 		0BBDEF5B1BA8533F00184D71 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBDEF4D1BA8533F00184D71 /* MJRefreshBaseView.m */; };
 		0BBDEF5C1BA8533F00184D71 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBDEF4F1BA8533F00184D71 /* MJRefreshConst.m */; };
@@ -113,6 +114,7 @@
 		0B2F37D61B9F3626003EC1CB /* TTBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseTableViewController.m; sourceTree = "<group>"; };
 		0B2F37D81B9F383D003EC1CB /* TTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLoginViewController.h; sourceTree = "<group>"; };
 		0B2F37D91B9F383D003EC1CB /* TTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLoginViewController.m; sourceTree = "<group>"; };
+		0B3797461BAEECBE00D2BD64 /* about.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = about.txt; sourceTree = "<group>"; };
 		0BBDEF4A1BA8533F00184D71 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
 		0BBDEF4B1BA8533F00184D71 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
 		0BBDEF4C1BA8533F00184D71 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 		09C664641B5F657B003BE91F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0B3797461BAEECBE00D2BD64 /* about.txt */,
 				09C664651B5F657B003BE91F /* Info.plist */,
 				09C664661B5F657B003BE91F /* main.m */,
 				09C781C31B5F814E0050B73F /* Macros.h */,
@@ -428,6 +431,7 @@
 			files = (
 				09C664701B5F657B003BE91F /* Main.storyboard in Resources */,
 				09C664751B5F657B003BE91F /* LaunchScreen.xib in Resources */,
+				0B3797471BAEECBE00D2BD64 /* about.txt in Resources */,
 				0BBDEF5A1BA8533F00184D71 /* MJRefresh.bundle in Resources */,
 				09C664721B5F657B003BE91F /* Images.xcassets in Resources */,
 				0BF2A4B71BA9C04700E3A7D9 /* WelComeViewController.xib in Resources */,
@@ -554,6 +558,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -573,7 +578,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "1bb9884a-fd29-4c07-8dc5-b1ddbbbc59ca";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -599,6 +604,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -611,7 +617,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "1bb9884a-fd29-4c07-8dc5-b1ddbbbc59ca";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -632,7 +638,7 @@
 					"$(PROJECT_DIR)/TTOwner/Vender/UPPayPlugin",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1bb9884a-fd29-4c07-8dc5-b1ddbbbc59ca";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -651,7 +657,7 @@
 					"$(PROJECT_DIR)/TTOwner/Vender/UPPayPlugin",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1bb9884a-fd29-4c07-8dc5-b1ddbbbc59ca";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
