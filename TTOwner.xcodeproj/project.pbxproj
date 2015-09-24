@@ -37,7 +37,7 @@
 		0B1408911BA0F02600BA92AC /* TTInvitationFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1408901BA0F02600BA92AC /* TTInvitationFriendsViewController.m */; };
 		0B2F37D71B9F3626003EC1CB /* TTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F37D61B9F3626003EC1CB /* TTBaseTableViewController.m */; };
 		0B2F37DA1B9F383D003EC1CB /* TTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F37D91B9F383D003EC1CB /* TTLoginViewController.m */; };
-		0B3797471BAEECBE00D2BD64 /* about.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B3797461BAEECBE00D2BD64 /* about.txt */; settings = {ASSET_TAGS = (); }; };
+		0B3797471BAEECBE00D2BD64 /* about.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B3797461BAEECBE00D2BD64 /* about.txt */; };
 		0BBDEF5A1BA8533F00184D71 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0BBDEF4A1BA8533F00184D71 /* MJRefresh.bundle */; };
 		0BBDEF5B1BA8533F00184D71 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBDEF4D1BA8533F00184D71 /* MJRefreshBaseView.m */; };
 		0BBDEF5C1BA8533F00184D71 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBDEF4F1BA8533F00184D71 /* MJRefreshConst.m */; };
@@ -397,7 +397,7 @@
 				TargetAttributes = {
 					09C664601B5F657B003BE91F = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = FHRN25K2EQ;
+						DevelopmentTeam = 7KB5AS4MMH;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 0;
@@ -554,8 +554,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wen Du (6WWFTZ4U92)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wen Du (6WWFTZ4U92)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
@@ -600,7 +600,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wen Du (6WWFTZ4U92)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -629,7 +629,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TTOwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -648,7 +648,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Wen Du (FHRN25K2EQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TTOwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

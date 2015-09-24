@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *feeLab;
 @property (weak, nonatomic) IBOutlet UILabel *moneyLab;
 
+@property (weak, nonatomic) IBOutlet UIButton *payBtn;
 
 
 @property (strong, nonatomic) NSMutableArray * dataSourceArray;
@@ -32,6 +33,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIImage * sel = [[UIImage imageNamed:@"reserve_bg01"] stretchableImageWithLeftCapWidth:2 topCapHeight:2];
+    [_payBtn setBackgroundImage:sel forState:UIControlStateNormal];
+    [_payBtn setBackgroundImage:sel forState:UIControlStateHighlighted];
+    [_payBtn setBackgroundImage:sel forState:UIControlStateSelected];
+    
+    
+    
     jsonDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"USERDATA"];
     
     _dataSourceArray = [[NSMutableArray alloc] init];

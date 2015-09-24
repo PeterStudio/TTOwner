@@ -26,6 +26,7 @@
 
 @implementation TTHomeViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationItem.leftBarButtonItem = nil;

@@ -12,6 +12,14 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    _stateBtn.layer.masksToBounds = YES;
+    _stateBtn.layer.cornerRadius = 4.0f;
+    
+    _woyaofatuBtn.layer.masksToBounds = YES;
+    _woyaofatuBtn.layer.cornerRadius = 4.0f;
+    
+    _baojingduBtn.layer.masksToBounds = YES;
+    _baojingduBtn.layer.cornerRadius = 4.0f;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

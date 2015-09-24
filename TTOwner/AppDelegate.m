@@ -41,7 +41,7 @@
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadRootView) name:@"ROOTVIEWCONTROLLER" object:nil];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showRoot) name:@"LOGOUT" object:nil];
     
     
     //定位服务管理对象初始化

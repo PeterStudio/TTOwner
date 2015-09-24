@@ -69,10 +69,10 @@
             }else{
                 [self.tableView footerEndRefreshing];
             }
+            NSLog(@"response = %@",responseObject);
             NSDictionary * dic1 = dic[@"doc"];
             NSArray * arr = dic1[@"record"];
-            NSNumber * number = dic1[@"balance"];
-            _accountLab.text = [number stringValue];
+            _accountLab.text = [NSString stringWithFormat:@"账户余额：¥%@元",dic1[@"balance"]];
             if (arr.count < 10) {
                 _hasMore = NO;
                 [self.tableView setFooterHidden:YES];
@@ -121,9 +121,16 @@
     NSDictionary * dic = [_dataSourceArray objectAtIndex:indexPath.row];
     cell.moneyLab.text = dic[@"num"];
     NSString * str = dic[@"time"];
-    cell.timeLab.text = str;
-    cell.statusLab.text = dic[@"state"];
-    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyyMMddHHmmss"];
+    NSDate * date = [dateFormatter dateFromString:str];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    cell.timeLab.text = [dateFormatter stringFromDate:date];
+    if ([@"0" isEqualToString:dic[@"state"]]) {
+        cell.statusLab.text = @"失败";
+    }else{
+        cell.statusLab.text = @"成功";
+    }
     return cell;
 }
 

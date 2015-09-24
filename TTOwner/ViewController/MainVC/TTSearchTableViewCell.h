@@ -14,5 +14,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *nameLab;
 @property (strong, nonatomic) IBOutlet UILabel *timeLab;
 @property (strong, nonatomic) IBOutlet UIButton *stateBtn;
+@property (weak, nonatomic) IBOutlet UIButton *woyaofatuBtn;
+@property (weak, nonatomic) IBOutlet UIButton *baojingduBtn;
 
 @end

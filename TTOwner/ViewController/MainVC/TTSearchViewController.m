@@ -27,7 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    _dataSourceArray = [[NSMutableArray alloc] init];
      jsonDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"USERDATA"];
      _dataSourceArray = [[NSMutableArray alloc] init];
      [SVProgressHUD showWithStatus:@"加载中" maskType:SVProgressHUDMaskTypeClear];
@@ -39,6 +39,8 @@
              _yuyueLab.text = [NSString stringWithFormat:@"%@人",dic1[@"reservationNum"]];
              _qiaotanLab.text = [NSString stringWithFormat:@"%@人",dic1[@"chatNum"]];
              _dataSourceArray = dic1[@"homeInfo"];
+             [self.tableView reloadData];
+             NSLog(@"_data = %@",_dataSourceArray);
              [SVProgressHUD dismiss];
          }else{
              [SVProgressHUD showErrorWithStatus:dic[@"retinfo"]];
@@ -61,9 +63,9 @@
     TTSearchTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"SearchCellidentifier"];
     
     NSDictionary * dic = [_dataSourceArray objectAtIndex:indexPath.row];
-    cell.indxLab.text = [NSString stringWithFormat:@"%2d",indexPath.row + 1];
+    cell.indxLab.text = [NSString stringWithFormat:@"%.2d",indexPath.row + 1];
     cell.addresLab.text = dic[@"address"];
-    cell.nameLab.text = [NSString stringWithFormat:@"%@  先生",dic[@"name"]];
+    cell.nameLab.text = [NSString stringWithFormat:@"%@",dic[@"name"]];
     
     switch ([dic[@"state"] integerValue]) {
         case 0:
@@ -90,7 +92,22 @@
         default:
             break;
     }
-//    cell.timeLab.text = dic[@""];
+    
+    
+    NSString * str = dic[@"time"];
+    if (str && str != [NSNull null]) {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyyMMddHHmmss"];
+        NSDate * date = [dateFormatter dateFromString:str];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+        cell.timeLab.text = [NSString stringWithFormat:@"施工时间:%@",[dateFormatter stringFromDate:date]];
+    }else{
+        cell.timeLab.text = @"";
+    }
+    
+    
+    
+//
     
     
     return cell;
